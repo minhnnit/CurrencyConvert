@@ -46,7 +46,7 @@
         <label>Amount</label>
         <input type="number" placeholder="Currency" name="amount" id="amount"/>
         <label>To</label>
-        <select name="to_currency" class="inputCurrency">
+        <select name="to_currency" class="inputCurrency toCurrency">
             <option value="INR" selected="1">Indian Rupee</option>
             <option value="USD">US Dollar</option>
             <option value="AUD">Australian Dollar</option>
@@ -57,7 +57,7 @@
         <span name="convert" id="convert" class="btn btn-default">Convert</span>
     </div>
 </form>
-<span id="results"></span>
+<span class="convert-amount">Converted Amount</span>:<span id="results"></span>
 
 <div class="convert-title">
     <h3>CURRENCY</h3>

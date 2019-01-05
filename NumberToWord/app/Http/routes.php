@@ -6,7 +6,7 @@ Route::get('/auto-update-from-lib/{alias}', 'UpdateFromLibController@index');
 Route::any('/next-update-from-lib/', 'UpdateFromLibController@updateCouponNextStore');
 //Home page
 Route::get('/', 'ConvertNumberIndexController@index');
-Route::post('/convertCurrency', 'ConvertNumberIndexController@handleCurrency');
+Route::get('/convertCurrency', 'ConvertNumberIndexController@generateConvertCurrency');
 Route::get('/getAllResults','ConvertNumberIndexController@generateConvert');
 Route::get('/home', 'HomeController@index');
 Route::get('/link-exchange', 'LinkExchangeController@index');

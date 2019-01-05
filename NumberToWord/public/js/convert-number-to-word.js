@@ -7,7 +7,7 @@ $(document).ready(function () {
             url: home + '/getAllResults',
             data: {numberInput: numberInput},
             type: "GET",
-            success:function (response) {
+            success: function (response) {
                 response = JSON.parse(response);
                 $('.eachNumberToWord').text(response['convertDigits']);
                 $('.allNumberToWord').text(response['convertNumber']);
@@ -20,11 +20,14 @@ $(document).ready(function () {
     });
 
     $('#convert').click(function () {
+        var data = $("#currency-form").serialize();
         $.ajax({
-            url: 'http://apilayer.net/api/live?access_key=e8ac956c6526dedb108cc8ed56e4a89e&currencies=USD,AUD,CAD,PLN,MXN&format=1',
+            url: home + '/convertCurrency',
             type: 'GET',
+            data : data,
             success: function (response) {
-                console.log(response);
+                var results =$('#results').append($('.toCurrency').val());
+                results.text(response);
             }
         })
     })
