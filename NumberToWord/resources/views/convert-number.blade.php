@@ -17,20 +17,19 @@
 </head>
 <body>
 <div class="convert-title">
-    <h1>SPELLOUT NUMBER</h1>
+    <h3>SPELLOUT NUMBER</h3>
 </div>
 <div class="col-xs-12">
     <p>Input Number</p>
-    <input type="number" id="numberInput" value="321456">
-    <button class="btn btn-green" type="submit" id="getEachDigits">Convert Each Digits To Word</button>
-    <button class="btn btn-default" type="submit" id="getResultFromNumber">Convert to Word</button>
+    <input type="number" id="numberInput" >
+    <button class="btn btn-default" type="submit" id="getAllResults">Convert Number To Word</button>
 </div>
 <div class="col-xs-12">
-    <p>Spellout each digits of number input:<span class="eachNumberToWord"></span></p><i class="fas fa-volume-up"></i>
-    <p>Spellout rule-based format: <span class="allNumberToWord"></span></p><i class="fas fa-volume-up"></i>
+    <input onclick="responsiveVoice.speak($('.eachNumberToWord').text());" type='button' value='🔊 Play' /><span>Spellout each digits of number input:</span><span class="eachNumberToWord"></span><br>
+    <input onclick="responsiveVoice.speak($('.allNumberToWord').text());" type='button' value='🔊 Play' /><span>Spellout rule-based format:</span> <span class="allNumberToWord"></span>
 </div>
 <div class="convert-title">
-    <h1>CONVERT CURRENCY</h1>
+    <h3>CONVERT CURRENCY</h3>
 </div>
 
 <form method="post" id="currency-form">
@@ -55,34 +54,34 @@
             <option value="EGP">Egyptian Pound</option>
             <option value="CNY">Chinese Yuan</option>
         </select>
-        <button type="submit" name="convert" id="convert" class="btn btn-default">Convert</button>
+        <span name="convert" id="convert" class="btn btn-default">Convert</span>
     </div>
 </form>
 <span id="results"></span>
 
 <div class="convert-title">
-    <h1>CURRENCY</h1>
+    <h3>CURRENCY</h3>
 </div>
 <div class="col-xs-12">
     <div class="usd">
-        <span class="span-currency">USD:</span><span class="allNumberToWord span-currency"></span><span
-                class="span-currency">United States Dollars</span><i class="fas fa-volume-up"></i>
+        <input onclick="responsiveVoice.speak($('.allNumberToWordUSD').text());" type='button' value='🔊 Play' /><span class="span-currency">USD:</span><span class="allNumberToWordUSD span-currency color-blue "></span><span
+                class="span-currency">United States Dollars</span>
     </div>
     <div class="eur">
-        <span class="span-currency">EUR:</span><span class="allNumberToWord span-currency"></span><span
-                class="span-currency">EURO</span><i class="fas fa-volume-up"></i>
+        <input onclick="responsiveVoice.speak($('.allNumberToWordEUR').text());" type='button' value='🔊 Play' /><span class="span-currency">EUR:</span><span class="allNumberToWordEUR span-currency color-blue"></span><span
+                class="span-currency">EURO</span>
     </div>
     <div class="vnd">
-        <span class="span-currency">VND:</span><span class="allNumberToWord span-currency"></span><span
-                class="span-currency">Vietnam Dong</span><i class="fas fa-volume-up"></i>
+        <input onclick="responsiveVoice.speak($('.allNumberToWordVND').text());" type='button' value='🔊 Play' /><span class="span-currency">VND:</span><span class="allNumberToWordVND span-currency color-blue"></span><span
+                class="span-currency">Vietnam Dong</span>
     </div>
     <div class="gbp">
-        <span class="span-currency">GBP:</span><span class="allNumberToWord span-currency"></span><span
-                class="span-currency">United Kingdom Pounds</span><i class="fas fa-volume-up"></i>
+        <input onclick="responsiveVoice.speak($('.allNumberToWordFBP').text());" type='button' value='🔊 Play' /><span class="span-currency">GBP:</span><span class="allNumberToWordFBP span-currency color-blue"></span><span
+                class="span-currency">United Kingdom Pounds</span>
     </div>
 </div>
 
-<input onclick='responsiveVoice.speak("THREE HUNDRED TWENTY-ONE THOUSAND FOUR HUNDRED FIFTY-SIX Viet Nam Dong");' type='button' value='🔊 Play' />
+
 <input type="hidden" value="{{ url('/') }}" id="home">
 </body>
 </html>

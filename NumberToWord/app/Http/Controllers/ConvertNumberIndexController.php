@@ -13,27 +13,32 @@ class ConvertNumberIndexController extends Controller
         return view('convert-number');
     }
 
-    public function convertNumber(Re $request)
+    public function convertNumber($numberInput)
     {
-        $numberInput = $request->all()["numberInput"];
         $numberConvert = new NumberFormatter("en", NumberFormatter::SPELLOUT);
         return $numberConvert->format($numberInput);
     }
 
-    public function convertDigits(Re $request)
+    public function convertDigits($numberInput)
     {
-        $numberInput = $request->all()["numberInput"];
         $splitNum = str_split($numberInput);
+        $numberArr = [];
         //        var_dump($splitNum);
         $inputNumCount = (count($splitNum));
         for ($i = 0; $i < $inputNumCount; $i++) {
             $countDigits = new NumberFormatter("en", NumberFormatter::SPELLOUT);
-            echo $countDigits->format($numberInput[$i]) . " ";
+            $covertDigit = $countDigits->format($numberInput[$i]);
+            array_push($numberArr,$covertDigit);
         }
+        return join(', ',$numberArr);
     }
 
-    public function generateConvert(){
-
+    public function generateConvert(Re $request){
+        $numberInput = $request->all()["numberInput"];
+        $data = [];
+        $data["convertNumber"] = $this->convertNumber($numberInput);
+        $data["convertDigits"] = $this->convertDigits($numberInput);
+        return json_encode($data);
     }
 
 
