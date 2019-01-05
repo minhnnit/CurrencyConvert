@@ -1,0 +1,5 @@
+/config/database.php
+/log_send_data.txt
+config/database.php
+config/config.php
+storage/framework/sessions

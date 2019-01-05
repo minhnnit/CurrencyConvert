@@ -1,0 +1,46 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Phuong
+ * Date: 6/4/2015
+ * Time: 8:59 AM
+ */
+return [
+    'location' => 'US',
+    'api_url' => 'http://devapi.mccorp.co.com/v2/',
+    //'api_url' => 'http://localhost:3001/v2/',
+    'api_version' => 'v1',
+    'reCapcha_public_key' => '6LcSQgoTAAAAADIOpvdqGmWmyfxXpqX5yl1IJANN',
+    'reCapcha_secret_key' => '6LcSQgoTAAAAABofESseySLTdw-VxUEyiTIL6wk4',
+    'password_default' => '1Qazxcde#',
+    'suffix_coupon' => '-coupons',
+    'coupon' => 'coupon',
+    'Coupon' => 'Coupon',
+    'COUPON' => 'COUPON',
+    'shipping' => 'shipping',
+    'Shipping' => 'Shipping',
+    'SHIPPING' => 'SHIPPING',
+    'projectname' => "couponsplusdeals",
+    'Projectname' => "CouponsPlusDeals",
+    'ProjectName' => "CouponsPlusDeals",
+    'PROJECTNAME' => "COUPONSPLUSDEALS",
+    'Project_Name' => "Coupons Plus Deals",
+    'domain' => 'CouponsPlusDeals.com',
+    'blog_link' => 'http://www.blog.couponsplusdeals.com/',
+    'dev_mode' => false,
+    'social' => [
+        'facebook' => [
+            'appId' => '1126764980691327',
+            'version' => 'v2.5'
+        ]
+    ],
+    'socialPages' => [
+        'facebook' => 'https://www.facebook.com/Coupons-Plus-Deals-495439567465073/',
+        'twitter' => 'https://twitter.com/couponsplusdeal',
+        'googlePlus' => 'https://plus.google.com/u/0/102234835436886025827',
+        'pinterest' => 'https://www.pinterest.com/CouponsPlusDeals/',
+        'reddit' => 'https://www.reddit.com/user/couponsplusdeals/',
+        'linkedin' => 'https://www.linkedin.com/in/coupons-plus-deals/',
+        'quora' => 'https://www.quora.com/profile/Coupons-Plus-Deals'
+    ]
+];

@@ -1,0 +1,25 @@
+.span-currency {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.span-currency:last-child {
+    margin-left: 10px;
+}
+
+.allNumberToWord,.eachNumberToWord {
+    color: #00b3ee;
+}
+#numberInput
+{
+    height: 33px;
+}
+.inputCurrency
+{
+    height: 28px;
+}
+.fa-volume-up
+{
+    margin-left: 5px;
+    cursor: pointer;
+}
