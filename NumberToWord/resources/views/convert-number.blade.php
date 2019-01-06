@@ -21,7 +21,7 @@
 </div>
 <div class="col-xs-12">
     <p>Input Number</p>
-    <input type="number" id="numberInput" >
+    <input type="number" id="numberInput" value="{{!empty($data["numberInput"]) ? $data["numberInput"] : ''}}">
     <button class="btn btn-default" type="submit" id="getAllResults">Convert Number To Word</button>
 </div>
 <div class="col-xs-12">

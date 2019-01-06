@@ -45,6 +45,7 @@ class ConvertNumberIndexController extends Controller
         $data = [];
         $data["convertNumber"] = $this->convertNumber($numberInput);
         $data["convertDigits"] = $this->convertDigits($numberInput);
+        $data["numberInput"] = $numberInput;
         return view('convert-number')->with('data',$data);
     }
 
