@@ -40,6 +40,14 @@ class ConvertNumberIndexController extends Controller
         return json_encode($data);
     }
 
+    public function inputNumberUrl($inputNumberUrl){
+        $numberInput = $inputNumberUrl;
+        $data = [];
+        $data["convertNumber"] = $this->convertNumber($numberInput);
+        $data["convertDigits"] = $this->convertDigits($numberInput);
+        return view('convert-number')->with('data',$data);
+    }
+
     function convertCurrency($amount,$from_currency,$to_currency){
 
         $from_Currency = urlencode($from_currency);
@@ -65,6 +73,4 @@ class ConvertNumberIndexController extends Controller
         $paramConvert = $this->convertCurrency($amount,$from_currency,$to_currency);
         return json_encode($paramConvert);
     }
-
-
 }

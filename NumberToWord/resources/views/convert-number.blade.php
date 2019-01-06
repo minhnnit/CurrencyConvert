@@ -25,8 +25,8 @@
     <button class="btn btn-default" type="submit" id="getAllResults">Convert Number To Word</button>
 </div>
 <div class="col-xs-12">
-    <input onclick="responsiveVoice.speak($('.eachNumberToWord').text());" type='button' value='🔊 Play' /><span>Spellout each digits of number input:</span><span class="eachNumberToWord"></span><br>
-    <input onclick="responsiveVoice.speak($('.allNumberToWord').text());" type='button' value='🔊 Play' /><span>Spellout rule-based format:</span> <span class="allNumberToWord"></span>
+    <input onclick="responsiveVoice.speak($('.eachNumberToWord').text());" type='button' value='🔊 Play' /><span>Spellout each digits of number input:</span><span class="eachNumberToWord"></span><span class="color-blue">{{!empty($data["convertDigits"]) ? $data["convertDigits"] : ''}}</span><br>
+    <input onclick="responsiveVoice.speak($('.allNumberToWord').text());" type='button' value='🔊 Play' /><span>Spellout rule-based format:</span> <span class="allNumberToWord"></span><span class="color-blue">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : ''}}</span>
 </div>
 <div class="convert-title">
     <h3>CONVERT CURRENCY</h3>
@@ -64,19 +64,19 @@
 </div>
 <div class="col-xs-12">
     <div class="usd">
-        <input onclick="responsiveVoice.speak($('.allNumberToWordUSD').text());" type='button' value='🔊 Play' /><span class="span-currency">USD:</span><span class="allNumberToWordUSD span-currency color-blue "></span><span
+        <input onclick="responsiveVoice.speak($('.allNumberToWordUSD').text());" type='button' value='🔊 Play' /><span class="span-currency">USD:</span><span class="allNumberToWordUSD span-currency color-blue "></span><span class="color-blue span-currency">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : ''}}</span><span
                 class="span-currency">United States Dollars</span>
     </div>
     <div class="eur">
-        <input onclick="responsiveVoice.speak($('.allNumberToWordEUR').text());" type='button' value='🔊 Play' /><span class="span-currency">EUR:</span><span class="allNumberToWordEUR span-currency color-blue"></span><span
+        <input onclick="responsiveVoice.speak($('.allNumberToWordEUR').text());" type='button' value='🔊 Play' /><span class="span-currency">EUR:</span><span class="allNumberToWordEUR span-currency color-blue"></span><span class="color-blue span-currency">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : ''}}</span><span
                 class="span-currency">EURO</span>
     </div>
     <div class="vnd">
-        <input onclick="responsiveVoice.speak($('.allNumberToWordVND').text());" type='button' value='🔊 Play' /><span class="span-currency">VND:</span><span class="allNumberToWordVND span-currency color-blue"></span><span
+        <input onclick="responsiveVoice.speak($('.allNumberToWordVND').text());" type='button' value='🔊 Play' /><span class="span-currency">VND:</span><span class="allNumberToWordVND span-currency color-blue"></span><span class="color-blue span-currency">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : ''}}</span><span
                 class="span-currency">Vietnam Dong</span>
     </div>
     <div class="gbp">
-        <input onclick="responsiveVoice.speak($('.allNumberToWordFBP').text());" type='button' value='🔊 Play' /><span class="span-currency">GBP:</span><span class="allNumberToWordFBP span-currency color-blue"></span><span
+        <input onclick="responsiveVoice.speak($('.allNumberToWordFBP').text());" type='button' value='🔊 Play' /><span class="span-currency">GBP:</span><span class="allNumberToWordFBP span-currency color-blue"></span><span class="color-blue span-currency">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : ''}}</span><span
                 class="span-currency">United Kingdom Pounds</span>
     </div>
 </div>
