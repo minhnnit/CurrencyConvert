@@ -28,8 +28,8 @@
           <file leaf-file-name="convert-number.blade.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/convert-number.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="73" column="21" lean-forward="true" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
+                <state relative-caret-position="391">
+                  <caret line="32" column="53" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
                 </state>
               </provider>
             </entry>
@@ -38,7 +38,7 @@
             <entry file="file://$PROJECT_DIR$/public/css/convert-css.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="102">
-                  <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+                  <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
                 </state>
               </provider>
             </entry>
@@ -47,7 +47,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="convert-number-to-word.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="convert-number-to-word.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/js/convert-number-to-word.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="357">
@@ -56,10 +56,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ConvertNumberIndexController.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="ConvertNumberIndexController.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ConvertNumberIndexController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
+                <state relative-caret-position="748">
                   <caret line="84" column="21" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
                 </state>
               </provider>
@@ -84,10 +84,10 @@
       <list>
         <option value="$PROJECT_DIR$/app/Http/ConvertNumberIndexController.php" />
         <option value="$PROJECT_DIR$/public/css/covert-css.css" />
-        <option value="$PROJECT_DIR$/public/css/convert-css.css" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ConvertNumberIndexController.php" />
         <option value="$PROJECT_DIR$/public/js/convert-number-to-word.js" />
+        <option value="$PROJECT_DIR$/public/css/convert-css.css" />
         <option value="$PROJECT_DIR$/resources/views/convert-number.blade.php" />
       </list>
     </option>
@@ -242,12 +242,12 @@
       <workItem from="1546309987852" duration="5182000" />
       <workItem from="1546326788806" duration="96304000" />
       <workItem from="1546678371766" duration="22768000" />
-      <workItem from="1546754427192" duration="11488000" />
+      <workItem from="1546754427192" duration="14492000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135742000" />
+    <option name="totallyTimeSpent" value="138746000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -421,10 +421,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ConvertNumberIndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="84" column="21" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/convert-css.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -437,15 +444,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/convert-number.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="73" column="21" lean-forward="true" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ConvertNumberIndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="84" column="21" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
+        <state relative-caret-position="391">
+          <caret line="32" column="53" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
         </state>
       </provider>
     </entry>

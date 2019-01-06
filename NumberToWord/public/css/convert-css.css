@@ -1,10 +1,13 @@
-.span-currency {
+.span-currency,.span-currency-c {
     font-size: 20px;
     font-weight: 700;
 }
 
-.span-currency {
-    margin-left: 10px;
+.span-currency-c {
+    margin-left: 3px;
+}
+.allNumberToWordConvert{
+    margin-left: 5px;
 }
 
 .allNumberToWord,.eachNumberToWord,.color-blue {
@@ -17,11 +20,6 @@
 .inputCurrency
 {
     height: 28px;
-}
-.fa-volume-up
-{
-    margin-left: 5px;
-    cursor: pointer;
 }
 .convert-amount
 {
