@@ -17,6 +17,9 @@
 
 </head>
 <body>
+<a href="{{ url('/') }}">
+    <img src="https://www.bestbuybestdeals.com/deal-new-template/img/logo-transparent.png" alt="">
+</a>
 <div class="convert-title">
     <h3>SPELLOUT NUMBER</h3>
 </div>
