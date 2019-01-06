@@ -8,7 +8,14 @@ class ConvertNumberIndexController extends Controller
 {
     public function index()
     {
-        return view('convert-number');
+        $listCurrency = [
+            "USD" => "United States Dollars",
+            "EUR" => "EURO",
+            "VND" => "Vietnam Dong",
+            "GBP" => "United Kingdom Pounds"
+
+        ];
+        return view('convert-number')->with('listCurrency',$listCurrency);
     }
 
     public function convertNumber($numberInput)
@@ -42,11 +49,18 @@ class ConvertNumberIndexController extends Controller
 
     public function inputNumberUrl($inputNumberUrl){
         $numberInput = $inputNumberUrl;
+        $listCurrency = [
+            "USD" => "United States Dollars",
+            "EUR" => "EURO",
+            "VND" => "Vietnam Dong",
+            "GBP" => "United Kingdom Pounds"
+
+        ];
         $data = [];
         $data["convertNumber"] = $this->convertNumber($numberInput);
         $data["convertDigits"] = $this->convertDigits($numberInput);
         $data["numberInput"] = $numberInput;
-        return view('convert-number')->with('data',$data);
+        return view('convert-number')->with('data',$data)->with('listCurrency',$listCurrency);
     }
 
     function convertCurrency($amount,$from_currency,$to_currency){

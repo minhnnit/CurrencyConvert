@@ -11,10 +11,7 @@ $(document).ready(function () {
                 response = JSON.parse(response);
                 $('.eachNumberToWord').text(response['convertDigits']);
                 $('.allNumberToWord').text(response['convertNumber']);
-                $('.allNumberToWordUSD').text(response['convertNumber']);
-                $('.allNumberToWordEUR').text(response['convertNumber']);
-                $('.allNumberToWordVND').text(response['convertNumber']);
-                $('.allNumberToWordFBP').text(response['convertNumber']);
+                $('.allNumberToWordConvert').text(response['convertNumber']);
             }
         })
     });
