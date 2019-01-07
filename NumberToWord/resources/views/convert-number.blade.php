@@ -30,10 +30,8 @@
 </div>
 <div class="col-xs-12">
     <input onclick="responsiveVoice.speak($('.eachNumberToWordAudio').text());" type='button' value='🔊 Play'/><span>Spellout each digits of number input:</span><span
-            class="eachNumberToWord eachNumberToWordAudio"></span><span
             class="color-blue eachNumberToWordAudio">{{!empty($data["convertDigits"]) ? $data["convertDigits"] : ''}}</span><br>
-    <input onclick="responsiveVoice.speak($('.allNumberToWordAudio').text());" type='button' value='🔊 Play'/><span>Spellout rule-based format:</span>
-    <span class="allNumberToWord allNumberToWordAudio"></span><span
+    <input onclick="responsiveVoice.speak($('.allNumberToWordAudio').text());" type='button' value='🔊 Play'/><span>Spellout rule-based format:</span><span
             class="color-blue allNumberToWordAudio">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : ''}}</span>
 </div>
 <div class="convert-title">
@@ -68,17 +66,16 @@
 <span class="convert-amount">Converted Amount</span>:<span id="results"></span>
 
 <div class="convert-title">
-    <h3>CURRENCY</h3>
+    <h3>CURRENCY TO TEXT</h3>
 </div>
 <div class="col-xs-12">
     <div>
         @if(!empty($listCurrency))
             @foreach($listCurrency as $v => $v_value)
                 <div>
-                    <input onclick="responsiveVoice.speak($('.{{$v}}',).text());" type='button'
+                    <input onclick="responsiveVoice.speak($('.{{$v}}').text());" type='button'
                            value='🔊 Play'/><span
                             class="span-currency">{{$v}}:</span><span
-                            class="allNumberToWordConvert span-currency color-blue  {{$v}}"></span><span
                             class="color-blue span-currency {{$v}}">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : ''}}</span><span
                             class="span-currency-c"> {{$v_value}}</span>
                 </div>

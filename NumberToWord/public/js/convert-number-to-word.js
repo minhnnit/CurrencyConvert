@@ -2,18 +2,9 @@ $(document).ready(function () {
     var home = $('#home').val();
 
     $('#getAllResults').click(function () {
-        var numberInput = $('#numberInput').val();
-        $.ajax({
-            url: home + '/getAllResults',
-            data: {numberInput: numberInput},
-            type: "GET",
-            success: function (response) {
-                response = JSON.parse(response);
-                $('.eachNumberToWord').text(response['convertDigits']);
-                $('.allNumberToWord').text(response['convertNumber']);
-                $('.allNumberToWordConvert').text(response['convertNumber']);
-            }
-        })
+       var numberInput = $('#numberInput').val();
+       var convertNumberUrl = home +'/'+ numberInput;
+       window.location.href = convertNumberUrl;
     });
 
     $('#convert').click(function () {

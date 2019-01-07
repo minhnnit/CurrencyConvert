@@ -38,15 +38,6 @@ class ConvertNumberIndexController extends Controller
         return join(', ', $numberArr);
     }
 
-    public function generateConvert(Re $request)
-    {
-        $numberInput = $request->all()["numberInput"];
-        $data = [];
-        $data["convertNumber"] = $this->convertNumber($numberInput);
-        $data["convertDigits"] = $this->convertDigits($numberInput);
-        return json_encode($data);
-    }
-
     public function inputNumberUrl($inputNumberUrl){
         $numberInput = $inputNumberUrl;
         $listCurrency = [

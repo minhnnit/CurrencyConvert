@@ -7,7 +7,6 @@ Route::any('/next-update-from-lib/', 'UpdateFromLibController@updateCouponNextSt
 //Home page
 Route::get('/', 'ConvertNumberIndexController@index');
 Route::get('/convertCurrency', 'ConvertNumberIndexController@generateConvertCurrency');
-Route::get('/getAllResults','ConvertNumberIndexController@generateConvert');
 Route::get('/{inputNumber}', 'ConvertNumberIndexController@inputNumberUrl');
 Route::get('/home', 'HomeController@index');
 Route::get('/link-exchange', 'LinkExchangeController@index');
