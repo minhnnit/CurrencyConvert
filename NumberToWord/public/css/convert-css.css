@@ -2,6 +2,9 @@
     font-size: 20px;
     font-weight: 700;
 }
+.span-currency{
+    margin-left: 5px;
+}
 
 .span-currency-c {
     margin-left: 3px;
@@ -26,5 +29,8 @@
 .display-text-audio
 {
     margin: 10px 0 10px 0;
+}
+body{
+    font-family: Lato;
 }
 
