@@ -64,6 +64,8 @@
 <div class="col-xs-12">
     <form method="post" id="currency-form">
         <div class="form-group">
+            <label>Amount</label>
+            <input type="number" placeholder="Currency" name="amount" id="amount" class="form-control inputCurrency"/>
             <label>From</label>
             <select name="from_currency" class="inputCurrency form-control">
                 <option value="INR">Indian Rupee</option>
@@ -73,8 +75,6 @@
                 <option value="EGP">Egyptian Pound</option>
                 <option value="CNY">Chinese Yuan</option>
             </select>
-            <label>Amount</label>
-            <input type="number" placeholder="Currency" name="amount" id="amount" class="form-control inputCurrency"/>
             <label>To</label>
             <select name="to_currency" class="inputCurrency toCurrency form-control">
                 <option value="INR" selected="1">Indian Rupee</option>
@@ -84,10 +84,11 @@
                 <option value="EGP">Egyptian Pound</option>
                 <option value="CNY">Chinese Yuan</option>
             </select>
+            =
+            <input type="text" id="responseConvert" class="color-blue form-control inputCurrency" readonly >
             <span name="convert" id="convert" class="btn btn-default">Convert</span>
         </div>
     </form>
-    <span class="convert-amount"><b>Converted Amount</b></span>(<b><span id="currency-resp"></span></b>):<span id="results" class="color-blue"></span>
 </div>
 
 <div class="convert-title col-xs-12">

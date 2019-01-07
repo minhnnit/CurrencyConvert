@@ -14,8 +14,7 @@ $(document).ready(function () {
             type: 'GET',
             data : data,
             success: function (response) {
-              $('#results').text(response);
-              $('#currency-resp').text($('.toCurrency').val());
+              $('#responseConvert').val(response);
             }
         })
     })
