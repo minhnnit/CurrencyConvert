@@ -13,16 +13,18 @@
 .allNumberToWord,.eachNumberToWord,.color-blue {
     color: #00b3ee;
 }
-#numberInput
-{
-    height: 33px;
-}
 .inputCurrency
 {
-    height: 28px;
+    height: 42px;
+    width: auto;
+    display: unset;
 }
 .convert-amount
 {
     font-size: 15px;
+}
+.display-text-audio
+{
+    margin: 10px 0 10px 0;
 }
 

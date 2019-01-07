@@ -25,14 +25,18 @@
 </div>
 <div class="col-xs-12">
     <p>Input Number</p>
-    <input type="number" id="numberInput" value="{{!empty($data["numberInput"]) ? $data["numberInput"] : ''}}">
+    <input type="number" class="form-control inputCurrency" required id="numberInput" value="{{!empty($data["numberInput"]) ? $data["numberInput"] : ''}}">
     <button class="btn btn-default" type="submit" id="getAllResults">Convert Number To Word</button>
 </div>
-<div class="col-xs-12">
-    <input onclick="responsiveVoice.speak($('.eachNumberToWordAudio').text());" type='button' value='🔊 Play'/><span>Spellout each digits of number input:</span><span
-            class="color-blue eachNumberToWordAudio">{{!empty($data["convertDigits"]) ? $data["convertDigits"] : ''}}</span><br>
-    <input onclick="responsiveVoice.speak($('.allNumberToWordAudio').text());" type='button' value='🔊 Play'/><span>Spellout rule-based format:</span><span
-            class="color-blue allNumberToWordAudio">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : ''}}</span>
+<div class="col-xs-12 display-text-audio">
+   <div>
+       <input onclick="responsiveVoice.speak($('.eachNumberToWordAudio').text());" type='button' value='🔊 Play'/><span>Spellout each digits of number input:</span><span
+               class="color-blue eachNumberToWordAudio">{{!empty($data["convertDigits"]) ? $data["convertDigits"] : ''}}</span>
+   </div>
+   <div>
+       <input onclick="responsiveVoice.speak($('.allNumberToWordAudio').text());" type='button' value='🔊 Play'/><span>Spellout rule-based format:</span><span
+               class="color-blue allNumberToWordAudio">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : ''}}</span>
+   </div>
 </div>
 <div class="convert-title">
     <h3>CONVERT CURRENCY</h3>
@@ -41,7 +45,7 @@
 <form method="post" id="currency-form">
     <div class="form-group">
         <label>From</label>
-        <select name="from_currency" class="inputCurrency">
+        <select name="from_currency" class="inputCurrency form-control">
             <option value="INR">Indian Rupee</option>
             <option value="USD" selected="1">US Dollar</option>
             <option value="AUD">Australian Dollar</option>
@@ -50,9 +54,9 @@
             <option value="CNY">Chinese Yuan</option>
         </select>
         <label>Amount</label>
-        <input type="number" placeholder="Currency" name="amount" id="amount"/>
+        <input type="number" placeholder="Currency" name="amount" id="amount" class="form-control inputCurrency"/>
         <label>To</label>
-        <select name="to_currency" class="inputCurrency toCurrency">
+        <select name="to_currency" class="inputCurrency toCurrency form-control">
             <option value="INR" selected="1">Indian Rupee</option>
             <option value="USD">US Dollar</option>
             <option value="AUD">Australian Dollar</option>
