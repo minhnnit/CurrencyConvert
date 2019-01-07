@@ -31,12 +31,12 @@
 </div>
 <div class="col-xs-12 display-text-audio">
    <div>
-       <input onclick="responsiveVoice.speak($('.eachNumberToWordAudio').text());" type='button' value='🔊 Play'/><span>Spellout each digits of number input:</span><span
+       <input onclick="responsiveVoice.speak($('.eachNumberToWordAudio').text());" type='button' value='🔊 Play'/><span class="span-currency">Spellout each digits of number input:</span><span
                class="color-blue eachNumberToWordAudio">{{!empty($data["convertDigits"]) ? $data["convertDigits"] : ''}}</span>
    </div>
     <br>
    <div>
-       <input onclick="responsiveVoice.speak($('.allNumberToWordAudio').text());" type='button' value='🔊 Play'/><span>Spellout rule-based format:</span><span
+       <input onclick="responsiveVoice.speak($('.allNumberToWordAudio').text());" type='button' value='🔊 Play'/><span class="span-currency">Spellout rule-based format:</span><span
                class="color-blue allNumberToWordAudio">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : ''}}</span>
    </div>
 </div>
