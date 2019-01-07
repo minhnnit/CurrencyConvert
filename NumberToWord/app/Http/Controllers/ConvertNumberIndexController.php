@@ -28,26 +28,51 @@ class ConvertNumberIndexController extends Controller
     {
         $splitNum = str_split($numberInput);
         $numberArr = [];
-        //        var_dump($splitNum);
         $inputNumCount = (count($splitNum));
         for ($i = 0; $i < $inputNumCount; $i++) {
             $countDigits = new NumberFormatter("en", NumberFormatter::SPELLOUT);
-            $covertDigit = $countDigits->format($numberInput[$i]);
-            array_push($numberArr, $covertDigit);
+            $convertDigit = $countDigits->format($numberInput[$i]);
+            array_push($numberArr, $convertDigit);
         }
         return join(', ', $numberArr);
     }
 
-    public function inputNumberUrl($inputNumberUrl){
-        $numberInput = $inputNumberUrl;
+    public function evenNumber($numberInput){
+        $splitNum = str_split($numberInput);
+        $evenNumberArr = [];
+        $inputNumCount = count($splitNum);
+        for ($i = 0; $i < $inputNumCount; $i++){
+            if($numberInput[$i]%2 ==0) {
+                array_push($evenNumberArr,$numberInput[$i]);
+            }
+        }
+        return join(', ',$evenNumberArr);
+    }
+
+    public function oddNumber($numberInput)
+    {
+        $splitNum = str_split($numberInput);
+        $oddNumberArr = [];
+        $inputNumCount = count($splitNum);
+        for($i = 0; $i < $inputNumCount; $i++){
+            if($numberInput[$i]%2 != 0) {
+                array_push($oddNumberArr,$numberInput[$i]);
+            }
+        }
+        return join(', ',$oddNumberArr);
+    }
+
+    public function inputNumberUrl($numberInput){
         $listCurrency = [
             "USD" => "United States Dollars",
             "EUR" => "EURO",
             "VND" => "Vietnam Dong",
             "GBP" => "United Kingdom Pounds"
-
         ];
+
         $data = [];
+        $data["evenNumber"] = $this->evenNumber($numberInput);
+        $data["oddNumber"] = $this->oddNumber($numberInput);
         $data["convertNumber"] = $this->convertNumber($numberInput);
         $data["convertDigits"] = $this->convertDigits($numberInput);
         $data["numberInput"] = $numberInput;

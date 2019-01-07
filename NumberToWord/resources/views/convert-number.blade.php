@@ -21,7 +21,7 @@
 <a href="{{ url('/') }}">
     <img src="https://www.bestbuybestdeals.com/deal-new-template/img/logo-transparent.png" alt="">
 </a>
-<div class="convert-title">
+<div class="convert-title col-xs-12">
     <h3>SPELLOUT NUMBER</h3>
 </div>
 <div class="col-xs-12">
@@ -40,38 +40,48 @@
                class="color-blue allNumberToWordAudio">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : ''}}</span>
    </div>
 </div>
-<div class="convert-title">
+<div class="number-type col-xs-12">
+    <div class="even-number">
+        Even numbers in input number : <span class="color-blue">{{!empty($data["evenNumber"]) ? $data["evenNumber"] : ''}}</span>
+    </div>
+    <div class="odd-number">
+        Odd numbers in input number : <span class="color-blue">{{!empty($data["oddNumber"]) ? $data["oddNumber"] : ''}}</span>
+    </div>
+</div>
+<div class="convert-title col-xs-12">
     <h3>CONVERT CURRENCY</h3>
 </div>
 
-<form method="post" id="currency-form">
-    <div class="form-group">
-        <label>From</label>
-        <select name="from_currency" class="inputCurrency form-control">
-            <option value="INR">Indian Rupee</option>
-            <option value="USD" selected="1">US Dollar</option>
-            <option value="AUD">Australian Dollar</option>
-            <option value="EUR">Euro</option>
-            <option value="EGP">Egyptian Pound</option>
-            <option value="CNY">Chinese Yuan</option>
-        </select>
-        <label>Amount</label>
-        <input type="number" placeholder="Currency" name="amount" id="amount" class="form-control inputCurrency"/>
-        <label>To</label>
-        <select name="to_currency" class="inputCurrency toCurrency form-control">
-            <option value="INR" selected="1">Indian Rupee</option>
-            <option value="USD">US Dollar</option>
-            <option value="AUD">Australian Dollar</option>
-            <option value="EUR">Euro</option>
-            <option value="EGP">Egyptian Pound</option>
-            <option value="CNY">Chinese Yuan</option>
-        </select>
-        <span name="convert" id="convert" class="btn btn-default">Convert</span>
-    </div>
-</form>
-<span class="convert-amount">Converted Amount</span>:<span id="results"></span>
+<div class="col-xs-12">
+    <form method="post" id="currency-form">
+        <div class="form-group">
+            <label>From</label>
+            <select name="from_currency" class="inputCurrency form-control">
+                <option value="INR">Indian Rupee</option>
+                <option value="USD" selected="1">US Dollar</option>
+                <option value="AUD">Australian Dollar</option>
+                <option value="EUR">Euro</option>
+                <option value="EGP">Egyptian Pound</option>
+                <option value="CNY">Chinese Yuan</option>
+            </select>
+            <label>Amount</label>
+            <input type="number" placeholder="Currency" name="amount" id="amount" class="form-control inputCurrency"/>
+            <label>To</label>
+            <select name="to_currency" class="inputCurrency toCurrency form-control">
+                <option value="INR" selected="1">Indian Rupee</option>
+                <option value="USD">US Dollar</option>
+                <option value="AUD">Australian Dollar</option>
+                <option value="EUR">Euro</option>
+                <option value="EGP">Egyptian Pound</option>
+                <option value="CNY">Chinese Yuan</option>
+            </select>
+            <span name="convert" id="convert" class="btn btn-default">Convert</span>
+        </div>
+    </form>
+    <span class="convert-amount"><b>Converted Amount</b></span>(<b><span id="currency-resp"></span></b>):<span id="results" class="color-blue"></span>
+</div>
 
-<div class="convert-title">
+<div class="convert-title col-xs-12">
     <h3>CURRENCY TO TEXT</h3>
 </div>
 <div class="col-xs-12">
