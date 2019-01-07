@@ -42,10 +42,19 @@
 </div>
 <div class="number-type col-xs-12">
     <div class="even-number">
-        Even numbers in input number : <span class="color-blue">{{!empty($data["evenNumber"]) ? $data["evenNumber"] : ''}}</span>
+        Even numbers in input string : <span class="color-blue">{{!empty($data["evenNumber"]) ? $data["evenNumber"] : ''}}</span>
     </div>
     <div class="odd-number">
-        Odd numbers in input number : <span class="color-blue">{{!empty($data["oddNumber"]) ? $data["oddNumber"] : ''}}</span>
+        Odd numbers in input string : <span class="color-blue">{{!empty($data["oddNumber"]) ? $data["oddNumber"] : ''}}</span>
+    </div>
+    <div class="max-number">
+        Max number in input string :  <span class="color-blue">{{!empty($data["maxNumber"]) ? $data["maxNumber"] : ''}}</span>
+    </div>
+    <div class="min-number">
+        Min number in input string :  <span class="color-blue">{{!empty($data["minNumber"]) ? $data["minNumber"] : ''}}</span>
+    </div>
+    <div class="array-sum">
+        Sum all digits in input string :  <span class="color-blue">{{!empty($data["arraySum"]) ? $data["arraySum"] : ''}}</span>
     </div>
 </div>
 <div class="convert-title col-xs-12">
@@ -89,11 +98,11 @@
         @if(!empty($listCurrency))
             @foreach($listCurrency as $v => $v_value)
                 <div>
-                    <input onclick="responsiveVoice.speak($('.{{$v}}').text());" type='button'
+                    <input onclick="responsiveVoice.speak($('.{{$v}}').text());responsiveVoice.speak($('.{{$v_value}}').text());" type='button'
                            value='🔊 Play'/><span
                             class="span-currency">{{$v}}:</span><span
                             class="color-blue span-currency {{$v}}">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : ''}}</span><span
-                            class="span-currency-c"> {{$v_value}}</span>
+                            class="span-currency-c {{$v_value}}"> {{$v_value}}</span>
                 </div>
             @endforeach
         @endif

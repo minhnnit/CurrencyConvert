@@ -9,10 +9,10 @@ class ConvertNumberIndexController extends Controller
     public function index()
     {
         $listCurrency = [
-            "USD" => "United States Dollars",
+            "USD" => "UnitedStatesDollars",
             "EUR" => "EURO",
-            "VND" => "Vietnam Dong",
-            "GBP" => "United Kingdom Pounds"
+            "VND" => "VietnamDong",
+            "GBP" => "UnitedKingdomPounds"
 
         ];
         return view('convert-number')->with('listCurrency',$listCurrency);
@@ -44,6 +44,7 @@ class ConvertNumberIndexController extends Controller
         for ($i = 0; $i < $inputNumCount; $i++){
             if($numberInput[$i]%2 ==0) {
                 array_push($evenNumberArr,$numberInput[$i]);
+//                $evenNumberArrUnique = array_unique($evenNumberArr);
             }
         }
         return join(', ',$evenNumberArr);
@@ -57,22 +58,35 @@ class ConvertNumberIndexController extends Controller
         for($i = 0; $i < $inputNumCount; $i++){
             if($numberInput[$i]%2 != 0) {
                 array_push($oddNumberArr,$numberInput[$i]);
+//                $oddNumberArrUnique =  array_unique($oddNumberArr);
             }
         }
         return join(', ',$oddNumberArr);
     }
 
+    public function squareRoot($numberInput){
+
+    }
+
     public function inputNumberUrl($numberInput){
         $listCurrency = [
-            "USD" => "United States Dollars",
+            "USD" => "UnitedStatesDollars",
             "EUR" => "EURO",
-            "VND" => "Vietnam Dong",
-            "GBP" => "United Kingdom Pounds"
+            "VND" => "VietnamDong",
+            "GBP" => "UnitedKingdomPounds"
         ];
+        $splitNum = str_split($numberInput);
 
+        $maxValue = max($splitNum);
+        $minValue = min($splitNum);
+        $arraySum = array_sum($splitNum);
         $data = [];
         $data["evenNumber"] = $this->evenNumber($numberInput);
         $data["oddNumber"] = $this->oddNumber($numberInput);
+        $data["squareRoot"] = $this->squareRoot($numberInput);
+        $data["maxNumber"] = $maxValue;
+        $data["minNumber"] = $minValue;
+        $data["arraySum"] = $arraySum;
         $data["convertNumber"] = $this->convertNumber($numberInput);
         $data["convertDigits"] = $this->convertDigits($numberInput);
         $data["numberInput"] = $numberInput;
