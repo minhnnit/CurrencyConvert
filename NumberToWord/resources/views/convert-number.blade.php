@@ -86,10 +86,11 @@
             </select>
             =
             <input type="text" id="responseConvert" class="color-blue form-control inputCurrency" readonly >
-            <span name="convert" id="convert" class="btn btn-default">Convert</span>
+            <span name="convert" id="convert" class="btn btn-default"><b>Convert</b><i class="fas fa-arrow-right"></i></span>
         </div>
     </form>
 </div>
+
 
 <div class="convert-title col-xs-12">
     <h3>CURRENCY TO TEXT</h3>

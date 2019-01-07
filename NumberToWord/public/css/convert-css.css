@@ -33,4 +33,17 @@ body{
 .eachNumberToWordAudio,.allNumberToWordAudio {
     margin-left: 5px;
 }
+#convert{
+    background-color: #015b9d;
+    color: #FFFFFF;
+}
+.fa-arrow-right
+{
+    margin-left: 3px;
+}
+.icon
+{
+    margin-top: 24px;
+}
+
 
