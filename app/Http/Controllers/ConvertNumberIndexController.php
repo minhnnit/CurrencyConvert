@@ -12,10 +12,26 @@ class ConvertNumberIndexController extends Controller
             "USD" => "UnitedStatesDollars",
             "EUR" => "EURO",
             "VND" => "VietnamDong",
-            "GBP" => "UnitedKingdomPounds"
-
+            "GBP" => "BritishPound",
+            "EGP" => "EgyptianPound",
+            "CNY" => "ChineseYuan",
+            "CAD" => "CanadianDollar",
+            "FRF" => "FrenchFranc",
+            "DEM" => "GermanMark",
+            "HKD" => "HongKongDollar",
+            "ISK" => "IcelandKrona",
+            "IDR" => "IndonesianRupiah",
+            "JPY" => "JapaneseYen",
+            "LAK" => "LaoKip",
+            "MOP" => "MacauPataca",
+            "MXN" => "MexicanPeso",
+            "BRL" => "BrazilianReal",
+            "PHP" => "PhilippinePeso",
+            "THB" => "ThaiBaht",
+            "TWD" => "TaiwanDollar",
+            "SEK" => "SwedishKrona"
         ];
-        return view('convert-number')->with('listCurrency',$listCurrency);
+        return view('convert-number')->with('listCurrency', $listCurrency);
     }
 
     public function convertNumber($numberInput)
@@ -37,17 +53,18 @@ class ConvertNumberIndexController extends Controller
         return join(', ', $numberArr);
     }
 
-    public function evenNumber($numberInput){
+    public function evenNumber($numberInput)
+    {
         $splitNum = str_split($numberInput);
         $evenNumberArr = [];
         $inputNumCount = count($splitNum);
-        for ($i = 0; $i < $inputNumCount; $i++){
-            if($numberInput[$i]%2 ==0) {
-                array_push($evenNumberArr,$numberInput[$i]);
+        for ($i = 0; $i < $inputNumCount; $i++) {
+            if ($numberInput[$i] % 2 == 0) {
+                array_push($evenNumberArr, $numberInput[$i]);
 //                $evenNumberArrUnique = array_unique($evenNumberArr);
             }
         }
-        return join(', ',$evenNumberArr);
+        return join(', ', $evenNumberArr);
     }
 
     public function oddNumber($numberInput)
@@ -55,25 +72,39 @@ class ConvertNumberIndexController extends Controller
         $splitNum = str_split($numberInput);
         $oddNumberArr = [];
         $inputNumCount = count($splitNum);
-        for($i = 0; $i < $inputNumCount; $i++){
-            if($numberInput[$i]%2 != 0) {
-                array_push($oddNumberArr,$numberInput[$i]);
+        for ($i = 0; $i < $inputNumCount; $i++) {
+            if ($numberInput[$i] % 2 != 0) {
+                array_push($oddNumberArr, $numberInput[$i]);
 //                $oddNumberArrUnique =  array_unique($oddNumberArr);
             }
         }
-        return join(', ',$oddNumberArr);
+        return join(', ', $oddNumberArr);
     }
 
-    public function squareRoot($numberInput){
-
-    }
-
-    public function inputNumberUrl($numberInput){
+    public function inputNumberUrl($numberInput)
+    {
         $listCurrency = [
             "USD" => "UnitedStatesDollars",
             "EUR" => "EURO",
             "VND" => "VietnamDong",
-            "GBP" => "UnitedKingdomPounds"
+            "GBP" => "BritishPound",
+            "EGP" => "EgyptianPound",
+            "CNY" => "ChineseYuan",
+            "CAD" => "CanadianDollar",
+            "FRF" => "FrenchFranc",
+            "DEM" => "GermanMark",
+            "HKD" => "HongKongDollar",
+            "ISK" => "IcelandKrona",
+            "IDR" => "IndonesianRupiah",
+            "JPY" => "JapaneseYen",
+            "LAK" => "LaoKip",
+            "MOP" => "MacauPataca",
+            "MXN" => "MexicanPeso",
+            "BRL" => "BrazilianReal",
+            "PHP" => "PhilippinePeso",
+            "THB" => "ThaiBaht",
+            "TWD" => "TaiwanDollar",
+            "SEK" => "SwedishKrona"
         ];
         $splitNum = str_split($numberInput);
 
@@ -83,21 +114,21 @@ class ConvertNumberIndexController extends Controller
         $data = [];
         $data["evenNumber"] = $this->evenNumber($numberInput);
         $data["oddNumber"] = $this->oddNumber($numberInput);
-        $data["squareRoot"] = $this->squareRoot($numberInput);
         $data["maxNumber"] = $maxValue;
         $data["minNumber"] = $minValue;
         $data["arraySum"] = $arraySum;
         $data["convertNumber"] = $this->convertNumber($numberInput);
         $data["convertDigits"] = $this->convertDigits($numberInput);
         $data["numberInput"] = $numberInput;
-        return view('convert-number')->with('data',$data)->with('listCurrency',$listCurrency);
+        return view('convert-number')->with('data', $data)->with('listCurrency', $listCurrency);
     }
 
-    function convertCurrency($amount,$from_currency,$to_currency){
+    function convertCurrency($amount, $from_currency, $to_currency)
+    {
 
         $from_Currency = urlencode($from_currency);
         $to_Currency = urlencode($to_currency);
-        $query =  "{$from_Currency}_{$to_Currency}";
+        $query = "{$from_Currency}_{$to_Currency}";
 
         $json = file_get_contents("https://free.currencyconverterapi.com/api/v6/convert?q={$query}&compact=ultra");
         $obj = json_decode($json, true);
@@ -115,7 +146,7 @@ class ConvertNumberIndexController extends Controller
         $from_currency = $request->all()['from_currency'];
         $amount = $request->all()['amount'];
         $to_currency = $request->all()['to_currency'];
-        $paramConvert = $this->convertCurrency($amount,$from_currency,$to_currency);
+        $paramConvert = $this->convertCurrency($amount, $from_currency, $to_currency);
         return json_encode($paramConvert);
     }
 }

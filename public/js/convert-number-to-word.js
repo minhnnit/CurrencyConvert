@@ -14,7 +14,8 @@ $(document).ready(function () {
             type: 'GET',
             data : data,
             success: function (response) {
-              $('#responseConvert').val(response);
+                var responseReplace =response.replace(/"/g, "");
+              $('#responseConvert').val(responseReplace);
             }
         })
     })
