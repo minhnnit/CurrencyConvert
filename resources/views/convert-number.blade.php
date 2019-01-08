@@ -18,9 +18,11 @@
 
 </head>
 <body>
-<a href="{{ url('/') }}">
-    <button>Homepage</button>
-</a>
+<div class="col-xs-12">
+    <a href="{{ url('/') }}">
+        <button class="btn btn-default">Homepage</button>
+    </a>
+</div>
 <div class="convert-title col-xs-12">
     <h3>SPELLOUT NUMBER</h3>
 </div>
@@ -157,7 +159,7 @@
     <div>
         @if(!empty($listCurrency))
             @foreach($listCurrency as $v => $v_value)
-                <div>
+                <div class="mg-bottom-5">
                     <input onclick="responsiveVoice.speak($('.{{$v}}').text());responsiveVoice.speak($('.{{$v_value}}').text());"
                            type='button'
                            value='🔊 Play'/><span
