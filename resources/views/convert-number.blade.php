@@ -160,12 +160,11 @@
         @if(!empty($listCurrency))
             @foreach($listCurrency as $v => $v_value)
                 <div class="mg-bottom-5">
-                    <input onclick="responsiveVoice.speak($('.{{$v}}').text());responsiveVoice.speak($('.{{$v_value}}').text());"
+                    <input onclick="responsiveVoice.speak($('.{{$v}}').text());"
                            type='button'
                            value='🔊 Play'/><span
                             class="span-currency">{{$v}}:</span><span
-                            class="color-blue span-currency {{$v}}">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : ''}}</span><span
-                            class="span-currency-c {{$v_value}}"> {{$v_value}}</span>
+                            class="color-blue span-currency {{$v}}">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : ''}} {{$v_value}}</span>
                 </div>
             @endforeach
         @endif

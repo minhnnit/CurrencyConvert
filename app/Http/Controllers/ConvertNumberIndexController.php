@@ -9,27 +9,27 @@ class ConvertNumberIndexController extends Controller
     public function index()
     {
         $listCurrency = [
-            "USD" => "UnitedStatesDollars",
+            "USD" => "United States Dollars",
             "EUR" => "EURO",
-            "VND" => "VietnamDong",
-            "GBP" => "BritishPound",
-            "EGP" => "EgyptianPound",
-            "CNY" => "ChineseYuan",
-            "CAD" => "CanadianDollar",
-            "FRF" => "FrenchFranc",
-            "DEM" => "GermanMark",
-            "HKD" => "HongKongDollar",
-            "ISK" => "IcelandKrona",
-            "IDR" => "IndonesianRupiah",
-            "JPY" => "JapaneseYen",
-            "LAK" => "LaoKip",
-            "MOP" => "MacauPataca",
-            "MXN" => "MexicanPeso",
-            "BRL" => "BrazilianReal",
-            "PHP" => "PhilippinePeso",
-            "THB" => "ThaiBaht",
-            "TWD" => "TaiwanDollar",
-            "SEK" => "SwedishKrona"
+            "VND" => "Vietnam Dong",
+            "GBP" => "British Pound",
+            "EGP" => "Egyptian Pound",
+            "CNY" => "Chinese Yuan",
+            "CAD" => "Canadian Dollar",
+            "FRF" => "French Franc",
+            "DEM" => "German Mark",
+            "HKD" => "HongKong Dollar",
+            "ISK" => "Iceland Krona",
+            "IDR" => "Indonesian Rupiah",
+            "JPY" => "Japanese Yen",
+            "LAK" => "Lao Kip",
+            "MOP" => "Macau Pataca",
+            "MXN" => "Mexican Peso",
+            "BRL" => "Brazilian Real",
+            "PHP" => "Philippine Peso",
+            "THB" => "Thai Baht",
+            "TWD" => "Taiwan Dollar",
+            "SEK" => "Swedish Krona"
         ];
         return view('convert-number')->with('listCurrency', $listCurrency);
     }
@@ -84,27 +84,27 @@ class ConvertNumberIndexController extends Controller
     public function inputNumberUrl($numberInput)
     {
         $listCurrency = [
-            "USD" => "UnitedStatesDollars",
+            "USD" => "United States Dollars",
             "EUR" => "EURO",
-            "VND" => "VietnamDong",
-            "GBP" => "BritishPound",
-            "EGP" => "EgyptianPound",
-            "CNY" => "ChineseYuan",
-            "CAD" => "CanadianDollar",
-            "FRF" => "FrenchFranc",
-            "DEM" => "GermanMark",
-            "HKD" => "HongKongDollar",
-            "ISK" => "IcelandKrona",
-            "IDR" => "IndonesianRupiah",
-            "JPY" => "JapaneseYen",
-            "LAK" => "LaoKip",
-            "MOP" => "MacauPataca",
-            "MXN" => "MexicanPeso",
-            "BRL" => "BrazilianReal",
-            "PHP" => "PhilippinePeso",
-            "THB" => "ThaiBaht",
-            "TWD" => "TaiwanDollar",
-            "SEK" => "SwedishKrona"
+            "VND" => "Vietnam Dong",
+            "GBP" => "British Pound",
+            "EGP" => "Egyptian Pound",
+            "CNY" => "Chinese Yuan",
+            "CAD" => "Canadian Dollar",
+            "FRF" => "French Franc",
+            "DEM" => "German Mark",
+            "HKD" => "HongKong Dollar",
+            "ISK" => "Iceland Krona",
+            "IDR" => "Indonesian Rupiah",
+            "JPY" => "Japanese Yen",
+            "LAK" => "Lao Kip",
+            "MOP" => "Macau Pataca",
+            "MXN" => "Mexican Peso",
+            "BRL" => "Brazilian Real",
+            "PHP" => "Philippine Peso",
+            "THB" => "Thai Baht",
+            "TWD" => "Taiwan Dollar",
+            "SEK" => "Swedish Krona"
         ];
         $splitNum = str_split($numberInput);
 
@@ -134,7 +134,7 @@ class ConvertNumberIndexController extends Controller
         $obj = json_decode($json, true);
 
         $val = floatval($obj["$query"]);
-        
+
         $total = $val * $amount;
         return number_format($total, 2, '.', '');
 
