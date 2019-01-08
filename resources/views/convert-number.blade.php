@@ -27,44 +27,59 @@
     <h3>SPELLOUT NUMBER</h3>
 </div>
 <div class="col-xs-12">
-    <p>Input Number</p>
-    <input type="number" class="form-control inputCurrency" required id="numberInput"
-           value="{{!empty($data["numberInput"]) ? $data["numberInput"] : ''}}">
-    <button class="btn btn-default" type="submit" id="getAllResults">Convert Number To Word</button>
-</div>
-<div class="col-xs-12 display-text-audio">
-    <div>
-        <input onclick="responsiveVoice.speak($('.eachNumberToWordAudio').text());" type='button' value='🔊 Play'/><span
-                class="span-currency">Spellout each digits of number input:</span><span
-                class="color-blue eachNumberToWordAudio">{{!empty($data["convertDigits"]) ? $data["convertDigits"] : ''}}</span>
+    <div class="col-xs-6">
+        <div>
+            <p>Input Number</p>
+            <input type="number" class="form-control inputCurrency" required id="numberInput"
+                   value="{{!empty($data["numberInput"]) ? $data["numberInput"] : ''}}">
+            <button class="btn btn-default" type="submit" id="getAllResults">Convert Number To Word</button>
+        </div>
+        <div class="display-text-audio">
+            <div>
+                <input onclick="responsiveVoice.speak($('.eachNumberToWordAudio').text());" type='button'
+                       value='🔊 Play'/><span
+                        class="span-currency">Spellout each digits of number input:</span><span
+                        class="color-blue eachNumberToWordAudio">{{!empty($data["convertDigits"]) ? $data["convertDigits"] : ''}}</span>
+            </div>
+            <br>
+            <div>
+                <input onclick="responsiveVoice.speak($('.allNumberToWordAudio').text());" type='button'
+                       value='🔊 Play'/><span
+                        class="span-currency">Spellout rule-based format:</span><span
+                        class="color-blue allNumberToWordAudio">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : ''}}</span>
+            </div>
+        </div>
+        <div class="number-type">
+            <div class="even-number">
+                Even numbers in input string : <span
+                        class="color-blue">{{!empty($data["evenNumber"]) ? $data["evenNumber"] : ''}}</span>
+            </div>
+            <div class="odd-number">
+                Odd numbers in input string : <span
+                        class="color-blue">{{!empty($data["oddNumber"]) ? $data["oddNumber"] : ''}}</span>
+            </div>
+            <div class="max-number">
+                Max number in input string : <span
+                        class="color-blue">{{!empty($data["maxNumber"]) ? $data["maxNumber"] : ''}}</span>
+            </div>
+            <div class="min-number">
+                Min number in input string : <span
+                        class="color-blue">{{!empty($data["minNumber"]) ? $data["minNumber"] : ''}}</span>
+            </div>
+            <div class="array-sum">
+                Sum all digits in input string : <span
+                        class="color-blue">{{!empty($data["arraySum"]) ? $data["arraySum"] : ''}}</span>
+            </div>
+        </div>
     </div>
-    <br>
-    <div>
-        <input onclick="responsiveVoice.speak($('.allNumberToWordAudio').text());" type='button' value='🔊 Play'/><span
-                class="span-currency">Spellout rule-based format:</span><span
-                class="color-blue allNumberToWordAudio">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : ''}}</span>
-    </div>
-</div>
-<div class="number-type col-xs-12">
-    <div class="even-number">
-        Even numbers in input string : <span
-                class="color-blue">{{!empty($data["evenNumber"]) ? $data["evenNumber"] : ''}}</span>
-    </div>
-    <div class="odd-number">
-        Odd numbers in input string : <span
-                class="color-blue">{{!empty($data["oddNumber"]) ? $data["oddNumber"] : ''}}</span>
-    </div>
-    <div class="max-number">
-        Max number in input string : <span
-                class="color-blue">{{!empty($data["maxNumber"]) ? $data["maxNumber"] : ''}}</span>
-    </div>
-    <div class="min-number">
-        Min number in input string : <span
-                class="color-blue">{{!empty($data["minNumber"]) ? $data["minNumber"] : ''}}</span>
-    </div>
-    <div class="array-sum">
-        Sum all digits in input string : <span
-                class="color-blue">{{!empty($data["arraySum"]) ? $data["arraySum"] : ''}}</span>
+    <div class="col-xs-6">
+        <div>
+            Relate Number Addition : {{!empty($data["numberAdd"]) ? $data["numberAdd"] : ''}}
+        </div>
+        Number Input: {{!empty($data["numberInput"]) ? $data["numberInput"] : ''}}
+        <div>
+            Relate Number Subtraction : {{!empty($data["numberSub"]) ? $data["numberSub"] : ''}}
+        </div>
     </div>
 </div>
 <div class="convert-title col-xs-12">
@@ -156,7 +171,7 @@
     <h3>CURRENCY TO TEXT</h3>
 </div>
 <div class="col-xs-12">
-    <div>
+    <div class="lead">
         @if(!empty($listCurrency))
             @foreach($listCurrency as $v => $v_value)
                 <div class="mg-bottom-5">
@@ -169,6 +184,7 @@
             @endforeach
         @endif
     </div>
+    <div class="more more-lead">More...</div>
 </div>
 
 

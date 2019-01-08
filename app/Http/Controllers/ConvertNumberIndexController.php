@@ -29,7 +29,53 @@ class ConvertNumberIndexController extends Controller
             "PHP" => "Philippine Peso",
             "THB" => "Thai Baht",
             "TWD" => "Taiwan Dollar",
-            "SEK" => "Swedish Krona"
+            "SEK" => "Swedish Krona",
+            "ZWD" => "Zimbabwe Dollar",
+            "ZMK" => "Zambian Kwacha",
+            "VES" => "Venezuelan Bolivar Soberano",
+            "UZS" => "Uzbekistan Som",
+            "UAH" => "Ukraine Hryvnia",
+            "UYU" => "Uruguayan Peso",
+            "UGX" => "Uganda Shilling",
+            "TMM" => "Turkmenistan Manat",
+            "TRY" => "Turkish Lira",
+            "TOP" => "Tonga Pa'anga",
+            "TJS" => "Tajikistani Somoni",
+            "CHF" => "Swiss Franc",
+            "LKR" => "Sri Lanka Rupee",
+            "ESP" => "Spanish Peseta",
+            "RON" => "Romanian New Lei",
+            "PTE" => "Portuguese Escudo",
+            "PLN" => "Polish Zloty",
+            "PKR" => "Pakistan Rupee",
+            "KPW" => "North Korean Won",
+            "NGN" => "Nigerian Naira",
+            "NZD" => "New Zealand Dollar",
+            "MMK" => "Myanmar Kyat",
+            "MAD" => "Moroccan Dirham",
+            "MYR" => "Malaysian Ringgit",
+            "LYD" => "Libyan Dinar",
+            "KZT" => "Kazakhstan Tenge",
+            "JMD" => "Jamaican Dollar",
+            "ITL" => "Italian Lira",
+            "IQD" => "Iraqi Dinar",
+            "HUF" => "Hungarian Forint",
+            "GNF" => "Guinea Franc",
+            "ECS" => "Ecuador Sucre",
+            "CZK" => "Czech Koruna",
+            "CUP" => "Cuban Peso",
+            "CLP" => "Chilean Peso",
+            "KYD" => "Cayman Islands Dollar",
+            "BIF" => "Burundi Franc",
+            "BGN" => "Bulgarian Lev",
+            "BND" => "Brunei Dollar",
+            "BWP" => "Botswana Pula",
+            "BAM" => "Bosnian Mark",
+            "BEF" => "Belgian Franc",
+            "BTN" => "Bhutan Ngultrum",
+            "BHD" => "Bahraini Dinar",
+            "ARS" => "Argentine Peso",
+            "ALL" => "Albanian Lek"
         ];
         return view('convert-number')->with('listCurrency', $listCurrency);
     }
@@ -81,6 +127,26 @@ class ConvertNumberIndexController extends Controller
         return join(', ', $oddNumberArr);
     }
 
+    public function numberAdd($numberInput)
+    {
+        $numberAddArr = [];
+        for ($i = 0; $i < 5; $i++) {
+            $numberAdd = $numberInput += 1;
+            array_push($numberAddArr, $numberAdd);
+        }
+        return join(', ',$numberAddArr);
+    }
+
+    public function numberSub($numberInput)
+    {
+        $numberSubArr = [];
+        for ($i = 0; $i < 5; $i++) {
+            $numberSub = $numberInput -= 1;
+            array_push($numberSubArr, $numberSub);
+        }
+        return join(', ',$numberSubArr);
+    }
+
     public function inputNumberUrl($numberInput)
     {
         $listCurrency = [
@@ -104,7 +170,53 @@ class ConvertNumberIndexController extends Controller
             "PHP" => "Philippine Peso",
             "THB" => "Thai Baht",
             "TWD" => "Taiwan Dollar",
-            "SEK" => "Swedish Krona"
+            "SEK" => "Swedish Krona",
+            "ZWD" => "Zimbabwe Dollar",
+            "ZMK" => "Zambian Kwacha",
+            "VES" => "Venezuelan Bolivar Soberano",
+            "UZS" => "Uzbekistan Som",
+            "UAH" => "Ukraine Hryvnia",
+            "UYU" => "Uruguayan Peso",
+            "UGX" => "Uganda Shilling",
+            "TMM" => "Turkmenistan Manat",
+            "TRY" => "Turkish Lira",
+            "TOP" => "Tonga Pa'anga",
+            "TJS" => "Tajikistani Somoni",
+            "CHF" => "Swiss Franc",
+            "LKR" => "Sri Lanka Rupee",
+            "ESP" => "Spanish Peseta",
+            "RON" => "Romanian New Lei",
+            "PTE" => "Portuguese Escudo",
+            "PLN" => "Polish Zloty",
+            "PKR" => "Pakistan Rupee",
+            "KPW" => "North Korean Won",
+            "NGN" => "Nigerian Naira",
+            "NZD" => "New Zealand Dollar",
+            "MMK" => "Myanmar Kyat",
+            "MAD" => "Moroccan Dirham",
+            "MYR" => "Malaysian Ringgit",
+            "LYD" => "Libyan Dinar",
+            "KZT" => "Kazakhstan Tenge",
+            "JMD" => "Jamaican Dollar",
+            "ITL" => "Italian Lira",
+            "IQD" => "Iraqi Dinar",
+            "HUF" => "Hungarian Forint",
+            "GNF" => "Guinea Franc",
+            "ECS" => "Ecuador Sucre",
+            "CZK" => "Czech Koruna",
+            "CUP" => "Cuban Peso",
+            "CLP" => "Chilean Peso",
+            "KYD" => "Cayman Islands Dollar",
+            "BIF" => "Burundi Franc",
+            "BGN" => "Bulgarian Lev",
+            "BND" => "Brunei Dollar",
+            "BWP" => "Botswana Pula",
+            "BAM" => "Bosnian Mark",
+            "BEF" => "Belgian Franc",
+            "BTN" => "Bhutan Ngultrum",
+            "BHD" => "Bahraini Dinar",
+            "ARS" => "Argentine Peso",
+            "ALL" => "Albanian Lek"
         ];
         $splitNum = str_split($numberInput);
 
@@ -117,6 +229,8 @@ class ConvertNumberIndexController extends Controller
         $data["maxNumber"] = $maxValue;
         $data["minNumber"] = $minValue;
         $data["arraySum"] = $arraySum;
+        $data["numberAdd"] = $this->numberAdd($numberInput);
+        $data["numberSub"] = $this->numberSub($numberInput);
         $data["convertNumber"] = $this->convertNumber($numberInput);
         $data["convertDigits"] = $this->convertDigits($numberInput);
         $data["numberInput"] = $numberInput;

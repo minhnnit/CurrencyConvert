@@ -14,4 +14,4 @@
 //Home page
 Route::get('/', 'ConvertNumberIndexController@index');
 Route::get('/convertCurrency', 'ConvertNumberIndexController@generateConvertCurrency');
-Route::get('/{inputNumber}', 'ConvertNumberIndexController@inputNumberUrl');
+Route::get('/{inputNumber}-numbers', 'ConvertNumberIndexController@inputNumberUrl');

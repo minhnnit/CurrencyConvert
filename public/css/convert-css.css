@@ -49,5 +49,18 @@ body{
 {
     margin-bottom: 5px;
 }
+.lead
+{
+    float: left;
+    overflow: hidden;
+    font-size: 16px;
+    height: 230px;
+    width: 100%;
+}
+.more
+{
+    cursor: pointer;
+    color: #38c5cb;
+}
 
 

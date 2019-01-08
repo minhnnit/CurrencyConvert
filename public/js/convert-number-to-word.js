@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     $('#getAllResults').click(function () {
        var numberInput = $('#numberInput').val();
-       var convertNumberUrl = home +'/'+ numberInput;
+       var convertNumberUrl = home +'/'+ numberInput + '-numbers';
        window.location.href = convertNumberUrl;
     });
 
@@ -20,4 +20,26 @@ $(document).ready(function () {
         })
     })
 
+});
+jQuery(function ($) {
+
+    // Resize Height
+    function reh(e) {
+        $(e).css({'height': $(e).attr('height')})
+    }
+
+    // Empty Height
+    function emh(e) {
+        $(e).css({'height': 'auto'});
+    }
+
+    // Resize .lead (default height)
+    reh('.lead');
+
+    // Actions
+    // More: Lead
+    $('body').on('click', '.more-lead', function () {
+        emh($(this).siblings('.lead'));
+        $(this).remove();
+    });
 });
