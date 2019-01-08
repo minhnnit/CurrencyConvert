@@ -134,8 +134,7 @@ class ConvertNumberIndexController extends Controller
         $obj = json_decode($json, true);
 
         $val = floatval($obj["$query"]);
-
-
+        
         $total = $val * $amount;
         return number_format($total, 2, '.', '');
 
