@@ -145,6 +145,10 @@ body {
     .inputCurrency-nb {
         width: 100%;
     }
+    .lead
+    {
+        height: 272px;
+    }
 }
 
 
