@@ -34,7 +34,7 @@
                 <div class="spellout-number">
                     <h3>SPELLOUT NUMBER</h3>
                     <p><b>Input Number</b></p>
-                    <input type="number" class="form-control inputCurrency" required="" id="numberInput" value="823">
+                    <input type="number" class="form-control inputCurrency" required="" id="numberInput" value="{{!empty($data["numberInput"]) ? $data["numberInput"] : ''}}">
                     <button class="btn btn-default btn-padding" type="submit" id="getAllResults">Convert Number To Word</button>
                 </div>
                 <div class="display-text-audio" >
