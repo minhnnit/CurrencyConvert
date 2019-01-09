@@ -189,6 +189,32 @@ class ConvertNumberIndexController extends Controller
         return join(', ',$numberSubArr);
     }
 
+    public function randomNumber1($numberInput)
+    {
+        $randomNumber = rand(1,$numberInput);
+        return $randomNumber;
+    }
+    public function randomNumber2($numberInput)
+    {
+        $randomNumber = rand(1,$numberInput);
+        return $randomNumber;
+    }
+    public function randomNumber3($numberInput)
+    {
+        $randomNumber = rand(1,$numberInput);
+        return $randomNumber;
+    }
+    public function randomNumber4($numberInput)
+    {
+        $randomNumber = rand(1,$numberInput);
+        return $randomNumber;
+    }
+    public function randomNumber5($numberInput)
+    {
+        $randomNumber = rand(1,$numberInput);
+        return $randomNumber;
+    }
+
     public function inputNumberUrl($numberInput)
     {
         $listCurrency = [
@@ -283,6 +309,11 @@ class ConvertNumberIndexController extends Controller
         $data["numberSub3"] = $this->numberSub3($numberInput);
         $data["numberSub4"] = $this->numberSub4($numberInput);
         $data["numberSub5"] = $this->numberSub5($numberInput);
+        $data["randomNumber1"] = $this->randomNumber1($numberInput);
+        $data["randomNumber2"] = $this->randomNumber2($numberInput);
+        $data["randomNumber3"] = $this->randomNumber3($numberInput);
+        $data["randomNumber4"] = $this->randomNumber4($numberInput);
+        $data["randomNumber5"] = $this->randomNumber5($numberInput);
         $data["convertNumber"] = $this->convertNumber($numberInput);
         $data["convertDigits"] = $this->convertDigits($numberInput);
         $data["numberInput"] = $numberInput;

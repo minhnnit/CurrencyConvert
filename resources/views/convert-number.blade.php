@@ -88,6 +88,13 @@
             <a class="hrefsub4 cursor-pointer"><span class="numberSub4 span-currency">{{!empty($data["numberSub4"]) ? $data["numberSub4"] : ''}}</span></a>
             <a class="hrefsub5 cursor-pointer"><span class="numberSub5 span-currency">{{!empty($data["numberSub5"]) ? $data["numberSub5"] : ''}}</span></a>
         </div>
+        <div>
+            Random Number: <a class="hrefrandom1 cursor-pointer"><span class="span-currency randomNumber1">{{!empty($data["randomNumber1"]) ? $data["randomNumber1"] : ''}}</span></a>
+            <a class="hrefrandom2 cursor-pointer"><span class="span-currency randomNumber2">{{!empty($data["randomNumber2"]) ? $data["randomNumber2"] : ''}}</span></a>
+            <a class="hrefrandom3 cursor-pointer"><span class="span-currency randomNumber3">{{!empty($data["randomNumber3"]) ? $data["randomNumber3"] : ''}}</span></a>
+            <a class="hrefrandom4 cursor-pointer"><span class="span-currency randomNumber4">{{!empty($data["randomNumber4"]) ? $data["randomNumber4"] : ''}}</span></a>
+            <a class="hrefrandom5 cursor-pointer"><span class="span-currency randomNumber5">{{!empty($data["randomNumber5"]) ? $data["randomNumber5"] : ''}}</span></a>
+        </div>
     </div>
 </div>
 <div class="convert-title col-xs-12">

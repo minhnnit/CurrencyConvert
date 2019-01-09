@@ -71,6 +71,31 @@ $(document).ready(function () {
         var numberSub5Url = home + '/' + numberSub5 + '-numbers';
         window.location.href = numberSub5Url;
     });
+    $('.hrefrandom1').click(function () {
+        var randomNumber1 = $('.randomNumber1').text();
+        var randomNumber1Url = home + '/' + randomNumber1 + '-numbers';
+        window.location.href = randomNumber1Url;
+    });
+    $('.hrefrandom2').click(function () {
+        var randomNumber2 = $('.randomNumber2').text();
+        var randomNumber2Url = home + '/' + randomNumber2 + '-numbers';
+        window.location.href = randomNumber2Url;
+    });
+    $('.hrefrandom3').click(function () {
+        var randomNumber3 = $('.randomNumber3').text();
+        var randomNumber3Url = home + '/' + randomNumber3 + '-numbers';
+        window.location.href = randomNumber3Url;
+    });
+    $('.hrefrandom4').click(function () {
+        var randomNumber4 = $('.randomNumber4').text();
+        var randomNumber4Url = home + '/' + randomNumber4 + '-numbers';
+        window.location.href = randomNumber4Url;
+    });
+    $('.hrefrandom5').click(function () {
+        var randomNumber5 = $('.randomNumber5').text();
+        var randomNumber5Url = home + '/' + randomNumber5 + '-numbers';
+        window.location.href = randomNumber5Url;
+    });
 
 
 });
