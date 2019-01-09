@@ -74,19 +74,19 @@
     </div>
     <div class="col-xs-6">
         <div>
-            Relate Number Addition : <a class="hrefadd1 cursor-pointer"><span class="numberAdd1">{{!empty($data["numberAdd1"]) ? $data["numberAdd1"] : ''}}</span></a>
-            <a class="hrefadd2 cursor-pointer"><span class="numberAdd2">{{!empty($data["numberAdd2"]) ? $data["numberAdd2"] : ''}}</span></a>
-            <a class="hrefadd3 cursor-pointer"><span class="numberAdd3">{{!empty($data["numberAdd3"]) ? $data["numberAdd3"] : ''}}</span></a>
-            <a class="hrefadd4 cursor-pointer"><span class="numberAdd4">{{!empty($data["numberAdd4"]) ? $data["numberAdd4"] : ''}}</span></a>
+            Relate Number Addition : <a class="hrefadd1 cursor-pointer"><span class="numberAdd1 span-currency">{{!empty($data["numberAdd1"]) ? $data["numberAdd1"] : ''}}</span></a>
+            <a class="hrefadd2 cursor-pointer"><span class="numberAdd2 span-currency">{{!empty($data["numberAdd2"]) ? $data["numberAdd2"] : ''}}</span></a>
+            <a class="hrefadd3 cursor-pointer"><span class="numberAdd3 span-currency">{{!empty($data["numberAdd3"]) ? $data["numberAdd3"] : ''}}</span></a>
+            <a class="hrefadd4 cursor-pointer"><span class="numberAdd4 span-currency">{{!empty($data["numberAdd4"]) ? $data["numberAdd4"] : ''}}</span></a>
             <a class="hrefadd5 cursor-pointer"><span class="numberAdd5">{{!empty($data["numberAdd5"]) ? $data["numberAdd5"] : ''}}</span></a>
         </div>
         Number Input: {{!empty($data["numberInput"]) ? $data["numberInput"] : ''}}
         <div>
-            Relate Number Subtraction : <a class="hrefsub1 cursor-pointer"><span class="numberSub1">{{!empty($data["numberSub1"]) ? $data["numberSub1"] : ''}}</span></a>
-            <a class="hrefsub2 cursor-pointer"><span class="numberSub2">{{!empty($data["numberSub2"]) ? $data["numberSub2"] : ''}}</span></a>
-            <a class="hrefsub3 cursor-pointer"><span class="numberSub3">{{!empty($data["numberSub3"]) ? $data["numberSub3"] : ''}}</span></a>
-            <a class="hrefsub4 cursor-pointer"><span class="numberSub4">{{!empty($data["numberSub4"]) ? $data["numberSub4"] : ''}}</span></a>
-            <a class="hrefsub5 cursor-pointer"><span class="numberSub5">{{!empty($data["numberSub5"]) ? $data["numberSub5"] : ''}}</span></a>
+            Relate Number Subtraction : <a class="hrefsub1 cursor-pointer"><span class="numberSub1 span-currency">{{!empty($data["numberSub1"]) ? $data["numberSub1"] : ''}}</span></a>
+            <a class="hrefsub2 cursor-pointer"><span class="numberSub2 span-currency">{{!empty($data["numberSub2"]) ? $data["numberSub2"] : ''}}</span></a>
+            <a class="hrefsub3 cursor-pointer"><span class="numberSub3 span-currency">{{!empty($data["numberSub3"]) ? $data["numberSub3"] : ''}}</span></a>
+            <a class="hrefsub4 cursor-pointer"><span class="numberSub4 span-currency">{{!empty($data["numberSub4"]) ? $data["numberSub4"] : ''}}</span></a>
+            <a class="hrefsub5 cursor-pointer"><span class="numberSub5 span-currency">{{!empty($data["numberSub5"]) ? $data["numberSub5"] : ''}}</span></a>
         </div>
     </div>
 </div>
