@@ -200,6 +200,20 @@
         </div>
     </div>
 </div>
+<footer id="footer">
+    <div class="footer-left clear-fix">
+        <ul class="clearfix list-unstyled">
+            <li class="pull-left"><a href="#">About Us</a></li>
+            <li class="pull-left"><a href="#">Privacy Policy</a></li>
+            <li class="pull-left"><a href="#">Terms of Service</a></li>
+            <li class="pull-left"><a href="#">Scholarship</a></li>
+            <li class="pull-left"><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="footer-right">
+        © Copyright 2018. All Rights Reserved.
+    </div>
+</footer>
 
 <input type="hidden" value="{{ url('/') }}" id="home">
 

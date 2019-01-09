@@ -80,3 +80,34 @@ body
 .color-blue {
     color: #55552b;
 }
+#footer
+{
+    padding-top: 0;
+    background: #f2f2f2;
+    padding-bottom: 5px;
+}
+#footer .footer-left {
+    text-align: center;
+    color: #555;
+    padding-top: 35px;
+}
+#footer .footer-left ul {
+    margin-bottom: 0;
+    float: none;
+    display: inline-block;
+}
+#footer .footer-right {
+    margin-top: 15px;
+    text-align: center;
+    color: #555;
+}
+#footer .footer-left a {
+    display: inline-block;
+    font-size: 14px;
+    padding: 0 8px;
+    border-right: 1px solid #ccc;
+    color: #555;
+    text-decoration: none;
+}
+
+
