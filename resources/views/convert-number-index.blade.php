@@ -34,8 +34,10 @@
                 <div class="spellout-number">
                     <h3>SPELLOUT NUMBER</h3>
                     <p><b>Input Number</b></p>
-                    <input type="number" class="form-control inputCurrency" required="" id="numberInput" value="{{!empty($data["numberInput"]) ? $data["numberInput"] : ''}}">
-                    <button class="btn btn-default btn-padding" type="submit" id="getAllResults">Convert Number To Word</button>
+                    <input type="number" class="form-control inputCurrency-nb" required="" id="numberInput" value="{{!empty($data["numberInput"]) ? $data["numberInput"] : ''}}">
+                    <div class="button-convert-first">
+                        <button class="btn btn-default btn-padding" type="submit" id="getAllResults">Convert Number To Word</button>
+                    </div>
                 </div>
                 <div class="display-text-audio" >
                     <div class="speakout-digit">
@@ -149,8 +151,10 @@
                             </select>
                             =
                             <input type="text" id="responseConvert" class="color-blue form-control inputCurrency" readonly>
-                            <span name="convert" id="convert" class="btn btn-default"><b>Convert</b><i
-                                        class="fas fa-arrow-right"></i></span>
+                           <div class="convert-button">
+                                <span name="convert" id="convert" class="btn btn-default"><b>Convert</b><i
+                                            class="fas fa-arrow-right"></i></span>
+                           </div>
                         </div>
                     </form>
                 </div>
