@@ -62,5 +62,9 @@ body{
     cursor: pointer;
     color: #38c5cb;
 }
+.cursor-pointer
+{
+    cursor: pointer;
+}
 
 

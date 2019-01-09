@@ -137,6 +137,48 @@ class ConvertNumberIndexController extends Controller
         return join(', ',$numberAddArr);
     }
 
+    public function numberAdd1($numberInput){
+        $numberAdd1 = $numberInput += 1;
+        return $numberAdd1;
+    }
+    public function numberAdd2($numberInput){
+        $numberAdd2 = $numberInput += 2;
+        return $numberAdd2;
+    }
+    public function numberAdd3($numberInput){
+        $numberAdd3 = $numberInput += 3;
+        return $numberAdd3;
+    }
+    public function numberAdd4($numberInput){
+        $numberAdd4 = $numberInput += 4;
+        return $numberAdd4;
+    }
+    public function numberAdd5($numberInput){
+        $numberAdd5 = $numberInput += 5;
+        return $numberAdd5;
+    }
+
+    public function numberSub1($numberInput){
+        $numberSub1 = $numberInput -= 1;
+        return $numberSub1;
+    }
+    public function numberSub2($numberInput){
+        $numberSub2 = $numberInput -= 2;
+        return $numberSub2;
+    }
+    public function numberSub3($numberInput) {
+        $numberSub3 = $numberInput -= 3;
+        return $numberSub3;
+    }
+    public function numberSub4($numberInput) {
+        $numberSub4 = $numberInput -= 4;
+        return $numberSub4;
+    }
+    public function numberSub5($numberInput) {
+        $numberSub5 = $numberInput -= 5;
+        return $numberSub5;
+    }
+
     public function numberSub($numberInput)
     {
         $numberSubArr = [];
@@ -229,8 +271,18 @@ class ConvertNumberIndexController extends Controller
         $data["maxNumber"] = $maxValue;
         $data["minNumber"] = $minValue;
         $data["arraySum"] = $arraySum;
-        $data["numberAdd"] = $this->numberAdd($numberInput);
-        $data["numberSub"] = $this->numberSub($numberInput);
+      /*  $data["numberAdd"] = $this->numberAdd($numberInput);
+        $data["numberSub"] = $this->numberSub($numberInput);*/
+        $data["numberAdd1"] = $this->numberAdd1($numberInput);
+        $data["numberAdd2"] = $this->numberAdd2($numberInput);
+        $data["numberAdd3"] = $this->numberAdd3($numberInput);
+        $data["numberAdd4"] = $this->numberAdd4($numberInput);
+        $data["numberAdd5"] = $this->numberAdd5($numberInput);
+        $data["numberSub1"] = $this->numberSub1($numberInput);
+        $data["numberSub2"] = $this->numberSub2($numberInput);
+        $data["numberSub3"] = $this->numberSub3($numberInput);
+        $data["numberSub4"] = $this->numberSub4($numberInput);
+        $data["numberSub5"] = $this->numberSub5($numberInput);
         $data["convertNumber"] = $this->convertNumber($numberInput);
         $data["convertDigits"] = $this->convertDigits($numberInput);
         $data["numberInput"] = $numberInput;
