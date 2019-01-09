@@ -77,8 +77,9 @@ class ConvertNumberIndexController extends Controller
             "ARS" => "Argentine Peso",
             "ALL" => "Albanian Lek"
         ];
-        return view('convert-number')->with('listCurrency', $listCurrency);
+        return view('convert-number-index')->with('listCurrency', $listCurrency);
     }
+
 
     public function convertNumber($numberInput)
     {
@@ -317,7 +318,7 @@ class ConvertNumberIndexController extends Controller
         $data["convertNumber"] = $this->convertNumber($numberInput);
         $data["convertDigits"] = $this->convertDigits($numberInput);
         $data["numberInput"] = $numberInput;
-        return view('convert-number')->with('data', $data)->with('listCurrency', $listCurrency);
+        return view('convert-number-index')->with('data', $data)->with('listCurrency', $listCurrency);
     }
 
     function convertCurrency($amount, $from_currency, $to_currency)

@@ -1,0 +1,82 @@
+body
+{
+    font-family: Lato;
+}
+.header-content
+{
+    text-align: center;
+}
+.header-content
+{
+    background: #fff;
+    height: 60px;
+    padding: 0 15px;
+    border-bottom: 1px solid #ccc;
+}
+.header-content img
+{
+    height: 37px;
+}
+.logo-header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 0;
+}
+.convert-number-left h3
+{
+    text-align: center;
+}
+.inputCurrency
+{
+    height: 42px;
+    width: auto;
+    display: unset;
+}
+.btn-padding
+{
+    padding: 10px 5px 10px 5px;
+    margin-bottom: 3px;
+}
+.display-text-audio {
+    margin: 10px 0 10px 0;
+}
+.speakout-digit
+{
+    margin-bottom: 10px;
+}
+.span-currency
+{
+    margin-left: 5px;
+}
+#convert {
+    background-color: #015b9d;
+    color: #FFFFFF;
+}
+.fa-arrow-right {
+    margin-left: 3px;
+}
+.mg-bottom-5 {
+    margin-bottom: 5px;
+}
+.lead
+{
+    float: left;
+    overflow: hidden;
+    font-size: 16px;
+    height: 230px;
+    width: 100%;
+}
+.more
+{
+    cursor: pointer;
+    color: #38c5cb;
+}
+.cursor-pointer
+{
+    cursor: pointer;
+}
+.color-blue {
+    color: #55552b;
+}
