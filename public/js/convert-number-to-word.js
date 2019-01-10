@@ -4,7 +4,14 @@ $(document).ready(function () {
     $('#getAllResults').click(function () {
        var numberInput = $('#numberInput').val();
        var convertNumberUrl = home +'/'+ numberInput + '-numbers';
-       window.location.href = convertNumberUrl;
+       if(numberInput.length == 0)
+       {
+           alert('Please fill in number to convert !')
+       }
+       else
+       {
+           window.location.href = convertNumberUrl;
+       }
     });
 
     $('#convert').click(function () {
