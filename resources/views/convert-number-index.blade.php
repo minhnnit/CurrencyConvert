@@ -34,7 +34,7 @@
                 <div class="spellout-number">
                     <h3>SPELLOUT NUMBER</h3>
                     <p><b>Input Number</b></p>
-                    <input type="number" class="form-control inputCurrency-nb" required="" id="numberInput" value="{{!empty($data["numberInput"]) ? $data["numberInput"] : ''}}">
+                    <input type="number" class="form-control inputCurrency-nb" required="" id="numberInput" value="{{!empty($data["numberInput"]) ? $data["numberInput"] : '1'}}">
                     <div class="button-convert-first">
                         <button class="btn btn-default btn-padding" type="submit" id="getAllResults">Convert Number To Word</button>
                     </div>
@@ -80,7 +80,7 @@
                     <form method="post" id="currency-form">
                         <div class="form-group">
                             <label>Amount</label>
-                            <input type="number" placeholder="Currency" name="amount" id="amount" class="form-control inputCurrency"/>
+                            <input type="number" placeholder="Currency" name="amount" id="amount" class="form-control inputCurrency" value="1"/>
                             <label>From</label>
                             <select name="from_currency" class="inputCurrency form-control">
                                 <option value="INR">Indian Rupee</option>
@@ -180,21 +180,21 @@
         <div class="col-lg-3 col-xs-12">
             <h3>RELATE AND RANDOM NUMBER</h3>
             <div>
-                Relate Number Addition : <a class="hrefadd1 cursor-pointer"><span class="numberAdd1 span-currency">{{!empty($data["numberAdd1"]) ? $data["numberAdd1"] : ''}}</span></a>
+                <span class="relate-number"></span> <a class="hrefadd1 cursor-pointer"><span class="numberAdd1 span-currency">{{!empty($data["numberAdd1"]) ? $data["numberAdd1"] : ''}}</span></a>
                 <a class="hrefadd2 cursor-pointer"><span class="numberAdd2 span-currency">{{!empty($data["numberAdd2"]) ? $data["numberAdd2"] : ''}}</span></a>
                 <a class="hrefadd3 cursor-pointer"><span class="numberAdd3 span-currency">{{!empty($data["numberAdd3"]) ? $data["numberAdd3"] : ''}}</span></a>
                 <a class="hrefadd4 cursor-pointer"><span class="numberAdd4 span-currency">{{!empty($data["numberAdd4"]) ? $data["numberAdd4"] : ''}}</span></a>
-                <a class="hrefadd5 cursor-pointer"><span class="numberAdd5">{{!empty($data["numberAdd5"]) ? $data["numberAdd5"] : ''}}</span></a>
+                <a class="hrefadd5 cursor-pointer"><span class="numberAdd5 span-currency">{{!empty($data["numberAdd5"]) ? $data["numberAdd5"] : ''}}</span></a>
             </div>
-            Number Input: {{!empty($data["numberInput"]) ? $data["numberInput"] : ''}}
             <div>
-                Relate Number Subtraction : <a class="hrefsub1 cursor-pointer"><span class="numberSub1 span-currency">{{!empty($data["numberSub1"]) ? $data["numberSub1"] : ''}}</span></a>
+                <a class="hrefsub1 cursor-pointer"><span class="numberSub1 span-currency">{{!empty($data["numberSub1"]) ? $data["numberSub1"] : ''}}</span></a>
                 <a class="hrefsub2 cursor-pointer"><span class="numberSub2 span-currency">{{!empty($data["numberSub2"]) ? $data["numberSub2"] : ''}}</span></a>
                 <a class="hrefsub3 cursor-pointer"><span class="numberSub3 span-currency">{{!empty($data["numberSub3"]) ? $data["numberSub3"] : ''}}</span></a>
                 <a class="hrefsub4 cursor-pointer"><span class="numberSub4 span-currency">{{!empty($data["numberSub4"]) ? $data["numberSub4"] : ''}}</span></a>
                 <a class="hrefsub5 cursor-pointer"><span class="numberSub5 span-currency">{{!empty($data["numberSub5"]) ? $data["numberSub5"] : ''}}</span></a>
             </div>
-            <div>
+           <span class="number-input-right span-currency">{{!empty($data["numberInput"]) ? $data["numberInput"] : ''}}</span>
+            <div class="span-currency">
                 Random Number: <a class="hrefrandom1 cursor-pointer"><span class="span-currency randomNumber1">{{!empty($data["randomNumber1"]) ? $data["randomNumber1"] : ''}}</span></a>
                 <a class="hrefrandom2 cursor-pointer"><span class="span-currency randomNumber2">{{!empty($data["randomNumber2"]) ? $data["randomNumber2"] : ''}}</span></a>
                 <a class="hrefrandom3 cursor-pointer"><span class="span-currency randomNumber3">{{!empty($data["randomNumber3"]) ? $data["randomNumber3"] : ''}}</span></a>
@@ -210,7 +210,6 @@
             <li class="pull-left"><a href="#">About Us</a></li>
             <li class="pull-left"><a href="#">Privacy Policy</a></li>
             <li class="pull-left"><a href="#">Terms of Service</a></li>
-            <li class="pull-left"><a href="#">Scholarship</a></li>
             <li class="pull-left"><a href="#">Contact</a></li>
         </ul>
     </div>
