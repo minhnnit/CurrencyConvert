@@ -44,13 +44,13 @@
                         <input onclick="responsiveVoice.speak($('.eachNumberToWordAudio').text());" type='button'
                                value='🔊 Play'/><span
                                 class="span-currency">Spellout each digits of number input:</span><span
-                                class="color-blue eachNumberToWordAudio span-currency">{{!empty($data["convertDigits"]) ? $data["convertDigits"] : ''}}</span>
+                                class="color-blue eachNumberToWordAudio span-currency">{{!empty($data["convertDigits"]) ? $data["convertDigits"] : 'one'}}</span>
                     </div>
                     <div>
                         <input onclick="responsiveVoice.speak($('.allNumberToWordAudio').text());" type='button'
                                value='🔊 Play'/><span
                                 class="span-currency">Spellout rule-based format:</span><span
-                                class="color-blue allNumberToWordAudio span-currency">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : ''}}</span>
+                                class="color-blue allNumberToWordAudio span-currency">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : 'one'}}</span>
                     </div>
                 </div>
                 <div class="number-type">
@@ -60,19 +60,19 @@
                     </div>
                     <div class="odd-number">
                         Odd numbers in input string : <span
-                                class="color-blue">{{!empty($data["oddNumber"]) ? $data["oddNumber"] : ''}}</span>
+                                class="color-blue">{{!empty($data["oddNumber"]) ? $data["oddNumber"] : '1'}}</span>
                     </div>
                     <div class="max-number">
                         Max number in input string : <span
-                                class="color-blue">{{!empty($data["maxNumber"]) ? $data["maxNumber"] : ''}}</span>
+                                class="color-blue">{{!empty($data["maxNumber"]) ? $data["maxNumber"] : '1'}}</span>
                     </div>
                     <div class="min-number">
                         Min number in input string : <span
-                                class="color-blue">{{!empty($data["minNumber"]) ? $data["minNumber"] : ''}}</span>
+                                class="color-blue">{{!empty($data["minNumber"]) ? $data["minNumber"] : '1'}}</span>
                     </div>
                     <div class="array-sum">
                         Sum all digits in input string : <span
-                                class="color-blue">{{!empty($data["arraySum"]) ? $data["arraySum"] : ''}}</span>
+                                class="color-blue">{{!empty($data["arraySum"]) ? $data["arraySum"] : '1'}}</span>
                     </div>
                 </div>
                 <div class="convert-currency">
@@ -168,7 +168,7 @@
                                            type='button'
                                            value='🔊 Play'/><span
                                             class="span-currency">{{$v}}:</span><span
-                                            class="color-blue span-currency {{$v}}">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : ''}} {{$v_value}}</span>
+                                            class="color-blue span-currency {{$v}}">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : 'one'}} {{$v_value}}</span>
                                 </div>
                             @endforeach
                         @endif
@@ -178,23 +178,22 @@
             </div>
         </div>
         <div class="col-lg-3 col-xs-12">
-            <h3>RELATE AND RANDOM NUMBER</h3>
-            <div>
+            <h3 class="relate-number">RELATE AND RANDOM NUMBER</h3>
+            <span>
                 <span class="relate-number"></span> <a class="hrefadd1 cursor-pointer"><span class="numberAdd1 span-currency">{{!empty($data["numberAdd1"]) ? $data["numberAdd1"] : ''}}</span></a>
                 <a class="hrefadd2 cursor-pointer"><span class="numberAdd2 span-currency">{{!empty($data["numberAdd2"]) ? $data["numberAdd2"] : ''}}</span></a>
                 <a class="hrefadd3 cursor-pointer"><span class="numberAdd3 span-currency">{{!empty($data["numberAdd3"]) ? $data["numberAdd3"] : ''}}</span></a>
                 <a class="hrefadd4 cursor-pointer"><span class="numberAdd4 span-currency">{{!empty($data["numberAdd4"]) ? $data["numberAdd4"] : ''}}</span></a>
                 <a class="hrefadd5 cursor-pointer"><span class="numberAdd5 span-currency">{{!empty($data["numberAdd5"]) ? $data["numberAdd5"] : ''}}</span></a>
-            </div>
-            <div>
+            </span>
+            <span>
                 <a class="hrefsub1 cursor-pointer"><span class="numberSub1 span-currency">{{!empty($data["numberSub1"]) ? $data["numberSub1"] : ''}}</span></a>
                 <a class="hrefsub2 cursor-pointer"><span class="numberSub2 span-currency">{{!empty($data["numberSub2"]) ? $data["numberSub2"] : ''}}</span></a>
                 <a class="hrefsub3 cursor-pointer"><span class="numberSub3 span-currency">{{!empty($data["numberSub3"]) ? $data["numberSub3"] : ''}}</span></a>
                 <a class="hrefsub4 cursor-pointer"><span class="numberSub4 span-currency">{{!empty($data["numberSub4"]) ? $data["numberSub4"] : ''}}</span></a>
                 <a class="hrefsub5 cursor-pointer"><span class="numberSub5 span-currency">{{!empty($data["numberSub5"]) ? $data["numberSub5"] : ''}}</span></a>
-            </div>
-           <span class="number-input-right span-currency">{{!empty($data["numberInput"]) ? $data["numberInput"] : ''}}</span>
-            <div class="span-currency">
+            </span>
+            <div class="span-currency random-number">
                 Random Number: <a class="hrefrandom1 cursor-pointer"><span class="span-currency randomNumber1">{{!empty($data["randomNumber1"]) ? $data["randomNumber1"] : ''}}</span></a>
                 <a class="hrefrandom2 cursor-pointer"><span class="span-currency randomNumber2">{{!empty($data["randomNumber2"]) ? $data["randomNumber2"] : ''}}</span></a>
                 <a class="hrefrandom3 cursor-pointer"><span class="span-currency randomNumber3">{{!empty($data["randomNumber3"]) ? $data["randomNumber3"] : ''}}</span></a>
