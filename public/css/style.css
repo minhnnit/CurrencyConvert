@@ -33,9 +33,10 @@ body {
     width: auto;
     display: unset;
 }
-.inputCurrency-nb
-{
+
+.inputCurrency-nb {
     height: 42px;
+    font-weight: 700;
 }
 
 .btn-padding {
@@ -126,61 +127,71 @@ body {
     margin-top: 10px;
 }
 
-.button-convert-first
-{
+.button-convert-first {
     text-align: center;
     margin-top: 5px;
 }
-.relate-number
-{
+
+.relate-number {
     font-size: 16px;
 }
-.random-number
-{
+
+.random-number {
     margin-top: 10px;
 }
-.darkgrey{
+
+.darkgrey {
     color: #202221;
 }
-.bg-convert
-{
+
+.bg-convert {
     background-color: #fece00;
 }
+
 .row.default:last-child {
     padding-bottom: 30px;
 }
+
 .row.default:first-child {
-    padding-top: 30px;
+    padding-top: 75px;
 }
+
 .row.default {
     padding: 10px 0;
 }
+
 .row h1:first-child {
     margin-top: 0;
 }
+
 h1 {
     margin: 30px 0;
 }
-.fs-16px
-{
+
+.fs-16px {
     font-size: 16px;
 }
+
 #currency-converter {
     padding-top: 10px;
     padding-bottom: 0;
 }
+
 .converter-box {
     border-radius: 3px;
-    box-shadow: 0 0 10px 0 rgba(50,50,50,.5);
+    box-shadow: 0 0 10px 0 rgba(50, 50, 50, .5);
 }
+
 .bg-lightgrey {
     background-color: #f4f7f9;
 }
+
 /*neu xoa thi bat dau tu dong nay tro xuong*/
 .converter-box #calculator {
-    padding-top: 15px!important;
+    padding-top: 15px !important;
 }
-.converter-box #calculator, .converter-box #result {
+
+.converter-box #calculator {
     margin: 0;
     padding: 0 15px;
     -webkit-border-bottom-right-radius: 3px;
@@ -190,12 +201,14 @@ h1 {
     -moz-border-radius-bottomleft: 3px;
     border-bottom-left-radius: 3px;
 }
+
 #currency-converter form#currency-form select {
     height: 100%;
     background-color: #fff;
     padding: 11px 12px;
     font-weight: 700;
 }
+
 #currency-converter .form-control {
     width: 100%;
 }
@@ -215,45 +228,81 @@ h1 {
     margin: 30px 0;
 }
 
-.thead-color
-{
+.thead-color {
     background-color: #004fa3;
     color: #FFFFFF;
 }
-tr
-{
+
+tr {
     cursor: pointer;
 }
-tr:hover
-{
+
+tr:hover {
     background: #3983ce;
     color: #FFFFFF;
 }
-table
-{
+
+table {
     border-left: solid 1px #e7e7e7;
     border-right: solid 1px #e7e7e7;
 }
-.speak-audio
-{
+
+.speak-audio {
     background-color: aliceblue;
     border: 0;
+    padding: 5px 10px;
 }
-.table>tbody>tr>td
-{
+
+.table > tbody > tr > td {
     border-bottom: solid 1px #e7e7e7;
 }
 
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 111;
+}
 
+.image {
+    background-image: url("../img/currency.jpeg");
+    background-repeat: no-repeat;
+    min-height: 220px !important;
+    background-size: cover;
+    background-position: center top;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
 
+.spellout-number {
+    padding: 21px;
+    color: #FFFFFF;
+}
 
+.text-white {
+    color: #FFFFFF;
+    font-size: 16px;
+    border: none;
+}
 
+.relate-number {
+    font-size: 16px;
+    color: #fff;
+    background-color: #45c5cb;
+    line-height: 54px;
+    font-weight: 700;
+}
 
+.h3-title {
+    color: #fff;
+    background-color: #45c5cb;
+    line-height: 54px;
+    font-weight: 700;
+}
 
-
-
-
-
+.sidebar-fs {
+    font-size: 22px;
+}
 
 @media (max-width: 991px) {
     .inputCurrency {
@@ -267,9 +316,13 @@ table
     .inputCurrency-nb {
         width: 100%;
     }
-    .lead
-    {
+
+    .lead {
         height: 272px;
+    }
+
+    .text-white {
+        font-size: 14px;
     }
 }
 

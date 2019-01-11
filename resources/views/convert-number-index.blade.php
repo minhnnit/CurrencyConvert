@@ -35,7 +35,8 @@
         </div>
         <div class="col-sm-4 col-sm-offset-1">
             <p>Select the currency and enter the amount you have. Then select the currency you would like and click
-                'Convert'. You'll see how much the recipient account would get.</p>
+                'Convert'. You'll see how much the recipient account would get based on <b>Currency Converter Api.</b>
+            </p>
             <div class="converter-container">
                 <div class="converter-box bg-lightgrey" id="currency-converter">
                     <h3 class="text-center">Currency Converter</h3>
@@ -44,7 +45,8 @@
                               method="post">
                             <div class=" form-group ">
                                 <div class="col-xs-12">
-                                    <select name="from_currency" placeholder="Sell currency" class="form-control col-lg-3" required="">
+                                    <select name="from_currency" placeholder="Sell currency"
+                                            class="form-control col-lg-3" required="">
                                         <optgroup id="sell_currency-optgroup-Common currencies"
                                                   label="Common currencies">
                                             <option value="AUD">AUD Australian Dollar</option>
@@ -191,7 +193,10 @@
                             <div class="sell-amount form-group ">
                                 <div class="col-xs-12">
                                     <div class="input-group">
-                                        <input type="number" placeholder="Currency" name="amount" id="amount" class="form-control inputCurrency" value="1"/><span class="input-group-addon"><span class="icon-refresh no-margin"><b>Amount</b></span></span>
+                                        <input type="number" placeholder="Currency" name="amount" id="amount"
+                                               class="form-control inputCurrency" value="1"/><span
+                                                class="input-group-addon"><span
+                                                    class="icon-refresh no-margin"><b>Amount</b></span></span>
                                     </div>
                                 </div>
                             </div>
@@ -343,9 +348,10 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                               <div class="col-xs-12">
-                                   <input type="text" id="responseConvert" class="color-blue form-control inputCurrency" readonly>
-                               </div>
+                                <div class="col-xs-12">
+                                    <input type="text" id="responseConvert"
+                                           class="color-blue form-control inputCurrency" readonly>
+                                </div>
                             </div>
                             <div class=" form-group ">
                                 <div class="col-xs-12">
@@ -367,82 +373,82 @@ Convert" buttons="danger info primary success warning inverse link" class="btn b
     <div id="main">
         <div class="col-lg-9 col-xs-12">
             <div class="convert-number-left">
-                <div class="spellout-number">
-                    <h3>SPELLOUT NUMBER</h3>
-                    <p><b>Input Number</b></p>
-                    <input type="number" class="form-control inputCurrency-nb" required="" id="numberInput"
-                           value="{{!empty($data["numberInput"]) ? $data["numberInput"] : '1'}}">
-                    <div class="button-convert-first">
-                        <button class="btn btn-default btn-padding" type="submit" id="getAllResults">Convert Number To
-                            Word
-                        </button>
+                <h3 class="h3-title">SPELLOUT NUMBER</h3>
+                <div class="image">
+                    <div class="spellout-number">
+                        <p class="text-center"><b>Input Number</b></p>
+                        <input type="number" class="form-control inputCurrency-nb text-center" required=""
+                               id="numberInput"
+                               value="{{!empty($data["numberInput"]) ? $data["numberInput"] : '1'}}">
+                        <div class="button-convert-first">
+                            <button class="btn btn-default btn-padding" type="submit" id="getAllResults"><b>Convert
+                                    Number To Word</b>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="number-type">
+                        <div>
+                            <table class="table text-white">
+                                <thead>
+                                <tr>
+                                    <th>Spellout</th>
+                                    <th>Value</th>
+                                    <th>Audio</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><span><b>Spellout each digits of number input</b></span></td>
+                                    <td>
+                                        <span class="eachNumberToWordAudio">{{!empty($data["convertDigits"]) ? $data["convertDigits"] : 'one'}}</span>
+                                    </td>
+                                    <td><input class="speak-audio"
+                                               onclick="responsiveVoice.speak($('.eachNumberToWordAudio').text());"
+                                               type='button' value='🔊'/></td>
+                                </tr>
+                                <tr>
+                                    <td><span><b>Spellout rule-based format</b></span></td>
+                                    <td><span
+                                                class="allNumberToWordAudio">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : 'one'}}</span>
+                                    </td>
+                                    <td><input class="speak-audio"
+                                               onclick="responsiveVoice.speak($('.allNumberToWordAudio').text());"
+                                               type='button'
+                                               value='🔊'/></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Even numbers in input string</b></td>
+                                    <td><span>{{!empty($data["evenNumber"]) ? $data["evenNumber"] : ''}}</span>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Odd numbers in input string</b></td>
+                                    <td><span>{{!empty($data["oddNumber"]) ? $data["oddNumber"] : '1'}}</span></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Min number in input string</b></td>
+                                    <td><span>{{!empty($data["minNumber"]) ? $data["minNumber"] : '1'}}</span></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Sum all digits in input string</b></td>
+                                    <td><span>{{!empty($data["arraySum"]) ? $data["arraySum"] : '1'}}</span></td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-                <div class="display-text-audio">
-                    <div class="speakout-digit">
-                        <input onclick="responsiveVoice.speak($('.eachNumberToWordAudio').text());" type='button'
-                               value='🔊 Play'/><span
-                                class="span-currency">Spellout each digits of number input:</span><span
-                                class="color-blue eachNumberToWordAudio span-currency">{{!empty($data["convertDigits"]) ? $data["convertDigits"] : 'one'}}</span>
-                    </div>
-                    <div>
-                        <input onclick="responsiveVoice.speak($('.allNumberToWordAudio').text());" type='button'
-                               value='🔊 Play'/><span
-                                class="span-currency">Spellout rule-based format:</span><span
-                                class="color-blue allNumberToWordAudio span-currency">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : 'one'}}</span>
-                    </div>
-                </div>
-                <div class="number-type">
-                    <div class="even-number">
-                        Even numbers in input string : <span
-                                class="color-blue">{{!empty($data["evenNumber"]) ? $data["evenNumber"] : ''}}</span>
-                    </div>
-                    <div class="odd-number">
-                        Odd numbers in input string : <span
-                                class="color-blue">{{!empty($data["oddNumber"]) ? $data["oddNumber"] : '1'}}</span>
-                    </div>
-                    <div class="max-number">
-                        Max number in input string : <span
-                                class="color-blue">{{!empty($data["maxNumber"]) ? $data["maxNumber"] : '1'}}</span>
-                    </div>
-                    <div class="min-number">
-                        Min number in input string : <span
-                                class="color-blue">{{!empty($data["minNumber"]) ? $data["minNumber"] : '1'}}</span>
-                    </div>
-                    <div class="array-sum">
-                        Sum all digits in input string : <span
-                                class="color-blue">{{!empty($data["arraySum"]) ? $data["arraySum"] : '1'}}</span>
-                    </div>
-                </div>
-                <section class="currency-res" tabindex="-1">
-                    <h3>Currencies To Audio</h3>
-                    <table class="table">
-                        <thead class="thead-color">
-                            <tr>
-                                <th>Currencies</th>
-                                <th>Currencies to text</th>
-                                <th>Audio</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @if(!empty($listCurrency))
-                                @foreach($listCurrency as $v => $v_value)
-                                    <tr>
-                                        <td><span class="span-currency"><b>{{$v}}</b></span></td>
-                                        <td><span class="span-currency {{$v}}">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : 'one'}} {{$v_value}}</span></td>
-                                        <td><input class="speak-audio" onclick="responsiveVoice.speak($('.{{$v}}').text());" type='button' value='🔊'/></td>
-                                    </tr>
-                                @endforeach
-                            @endif
-                        </tbody>
-                    </table>
-                </section>
             </div>
         </div>
         <div class="col-lg-3 col-xs-12">
-            <h3 class="relate-number">RELATE AND RANDOM NUMBER</h3>
-            <span>
-                <span class="relate-number"></span> <a class="hrefadd1 cursor-pointer"><span
+            <h3 class="relate-number text-center">RELATE AND RANDOM NUMBER</h3>
+            <div class="text-center sidebar-fs">
+                <span>
+                <a class="hrefadd1 cursor-pointer"><span
                             class="numberAdd1 span-currency">{{!empty($data["numberAdd1"]) ? $data["numberAdd1"] : ''}}</span></a>
                 <a class="hrefadd2 cursor-pointer"><span
                             class="numberAdd2 span-currency">{{!empty($data["numberAdd2"]) ? $data["numberAdd2"] : ''}}</span></a>
@@ -453,7 +459,7 @@ Convert" buttons="danger info primary success warning inverse link" class="btn b
                 <a class="hrefadd5 cursor-pointer"><span
                             class="numberAdd5 span-currency">{{!empty($data["numberAdd5"]) ? $data["numberAdd5"] : ''}}</span></a>
             </span>
-            <span>
+                <span>
                 <a class="hrefsub1 cursor-pointer"><span
                             class="numberSub1 span-currency">{{!empty($data["numberSub1"]) ? $data["numberSub1"] : ''}}</span></a>
                 <a class="hrefsub2 cursor-pointer"><span
@@ -465,20 +471,52 @@ Convert" buttons="danger info primary success warning inverse link" class="btn b
                 <a class="hrefsub5 cursor-pointer"><span
                             class="numberSub5 span-currency">{{!empty($data["numberSub5"]) ? $data["numberSub5"] : ''}}</span></a>
             </span>
-            <div class="span-currency random-number">
-                Random Numbers: <a class="hrefrandom1 cursor-pointer"><span
-                            class="span-currency randomNumber1">{{!empty($data["randomNumber1"]) ? $data["randomNumber1"] : ''}}</span></a>
-                <a class="hrefrandom2 cursor-pointer"><span
-                            class="span-currency randomNumber2">{{!empty($data["randomNumber2"]) ? $data["randomNumber2"] : ''}}</span></a>
-                <a class="hrefrandom3 cursor-pointer"><span
-                            class="span-currency randomNumber3">{{!empty($data["randomNumber3"]) ? $data["randomNumber3"] : ''}}</span></a>
-                <a class="hrefrandom4 cursor-pointer"><span
-                            class="span-currency randomNumber4">{{!empty($data["randomNumber4"]) ? $data["randomNumber4"] : ''}}</span></a>
-                <a class="hrefrandom5 cursor-pointer"><span
-                            class="span-currency randomNumber5">{{!empty($data["randomNumber5"]) ? $data["randomNumber5"] : ''}}</span></a>
+            </div>
+            <div class="span-currency random-number text-center">
+                <span class="sidebar-fs"><b>Random Numbers:</b></span>
+                <div class="sidebar-fs">
+                    <a class="hrefrandom1 cursor-pointer"><span
+                                class="span-currency randomNumber1">{{!empty($data["randomNumber1"]) ? $data["randomNumber1"] : ''}}</span></a>
+                    <a class="hrefrandom2 cursor-pointer"><span
+                                class="span-currency randomNumber2">{{!empty($data["randomNumber2"]) ? $data["randomNumber2"] : ''}}</span></a>
+                    <a class="hrefrandom3 cursor-pointer"><span
+                                class="span-currency randomNumber3">{{!empty($data["randomNumber3"]) ? $data["randomNumber3"] : ''}}</span></a>
+                    <a class="hrefrandom4 cursor-pointer"><span
+                                class="span-currency randomNumber4">{{!empty($data["randomNumber4"]) ? $data["randomNumber4"] : ''}}</span></a>
+                    <a class="hrefrandom5 cursor-pointer"><span
+                                class="span-currency randomNumber5">{{!empty($data["randomNumber5"]) ? $data["randomNumber5"] : ''}}</span></a>
+                </div>
             </div>
         </div>
     </div>
+</div>
+<div class="container">
+    <section class="currency-res" tabindex="-1">
+        <h3 class="h3-title">Currencies To Audio</h3>
+        <table class="table">
+            <thead class="thead-color">
+            <tr>
+                <th>Currencies</th>
+                <th>Currencies to text</th>
+                <th>Audio</th>
+            </tr>
+            </thead>
+            <tbody>
+            @if(!empty($listCurrency))
+                @foreach($listCurrency as $v => $v_value)
+                    <tr>
+                        <td><span class="span-currency"><b>{{$v}}</b></span></td>
+                        <td>
+                            <span class="span-currency {{$v}}">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : 'one'}} {{$v_value}}</span>
+                        </td>
+                        <td><input class="speak-audio" onclick="responsiveVoice.speak($('.{{$v}}').text());"
+                                   type='button' value='🔊'/></td>
+                    </tr>
+                @endforeach
+            @endif
+            </tbody>
+        </table>
+    </section>
 </div>
 <footer id="footer">
     <div class="footer-left clear-fix">

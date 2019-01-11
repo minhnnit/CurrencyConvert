@@ -16,14 +16,14 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7329803">
+    <splitter split-orientation="horizontal" split-proportion="0.69515884">
       <split-first>
         <leaf>
           <file leaf-file-name="convert-number-index.blade.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/convert-number-index.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="432" column="48" lean-forward="true" selection-start-line="432" selection-start-column="48" selection-end-line="432" selection-end-column="48" />
+                <state relative-caret-position="204">
+                  <caret line="453" column="47" lean-forward="true" selection-start-line="453" selection-start-column="47" selection-end-line="453" selection-end-column="47" />
                   <folding>
                     <element signature="e#13676#13681#0#HTML" expanded="true" />
                     <element signature="e#27522#27527#0#HTML" expanded="true" />
@@ -35,8 +35,8 @@
           <file leaf-file-name="ConvertNumberIndexController.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ConvertNumberIndexController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="326" column="36" lean-forward="true" selection-start-line="326" selection-start-column="36" selection-end-line="326" selection-end-column="36" />
+                <state relative-caret-position="357">
+                  <caret line="336" column="68" selection-start-line="336" selection-start-column="48" selection-end-line="336" selection-end-column="68" />
                   <folding>
                     <element signature="e#39#73#0#PHP" expanded="true" />
                   </folding>
@@ -60,8 +60,8 @@
           <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="276">
-                  <caret line="239" column="13" selection-start-line="239" selection-start-column="13" selection-end-line="239" selection-end-column="13" />
+                <state relative-caret-position="323">
+                  <caret line="317" column="5" lean-forward="true" selection-start-line="317" selection-start-column="5" selection-end-line="317" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -86,6 +86,10 @@
       <find>&lt;span class=&quot;icon-refresh no-margin&quot;&gt;&lt;/span&gt;</find>
       <find>icon-refresh no-margin&quot;&gt;&lt;/span&gt;</find>
       <find>icon-refresh no-margin</find>
+      <find>would</find>
+      <find>ho</find>
+      <find>h3</find>
+      <find>random-number</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -99,8 +103,8 @@
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ConvertNumberIndexController.php" />
         <option value="$PROJECT_DIR$/public/js/convert-number-to-word.js" />
-        <option value="$PROJECT_DIR$/resources/views/convert-number-index.blade.php" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/resources/views/convert-number-index.blade.php" />
       </list>
     </option>
   </component>
@@ -234,6 +238,12 @@
               <item name="CurrencyConvert" type="b2602c69:ProjectViewProjectNode" />
               <item name="CurrencyConvert" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CurrencyConvert" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CurrencyConvert" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -312,12 +322,12 @@
       <workItem from="1547027398012" duration="1764000" />
       <workItem from="1547034324423" duration="9598000" />
       <workItem from="1547084768337" duration="731000" />
-      <workItem from="1547085622213" duration="25425000" />
+      <workItem from="1547085622213" duration="33288000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78219000" />
+    <option name="totallyTimeSpent" value="86082000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -612,16 +622,6 @@
     <entry file="file://$PROJECT_DIR$/bootstrap/autoload.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ConvertNumberIndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="326" column="36" lean-forward="true" selection-start-line="326" selection-start-column="36" selection-end-line="326" selection-end-column="36" />
-          <folding>
-            <element signature="e#39#73#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/convert-number-to-word.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
@@ -629,21 +629,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ConvertNumberIndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="239" column="13" selection-start-line="239" selection-start-column="13" selection-end-line="239" selection-end-column="13" />
+        <state relative-caret-position="357">
+          <caret line="336" column="68" selection-start-line="336" selection-start-column="48" selection-end-line="336" selection-end-column="68" />
+          <folding>
+            <element signature="e#39#73#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/convert-number-index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="432" column="48" lean-forward="true" selection-start-line="432" selection-start-column="48" selection-end-line="432" selection-end-column="48" />
+        <state relative-caret-position="204">
+          <caret line="453" column="47" lean-forward="true" selection-start-line="453" selection-start-column="47" selection-end-line="453" selection-end-column="47" />
           <folding>
             <element signature="e#13676#13681#0#HTML" expanded="true" />
             <element signature="e#27522#27527#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="317" column="5" lean-forward="true" selection-start-line="317" selection-start-column="5" selection-end-line="317" selection-end-column="5" />
         </state>
       </provider>
     </entry>
