@@ -210,10 +210,46 @@ h1 {
     background-color: #00e6d4;
 }
 
-#sell_amount
-{
-    height: 42px;
+.currency-res {
+    padding: 0 0 40px 0;
+    margin: 30px 0;
 }
+
+.thead-color
+{
+    background-color: #004fa3;
+    color: #FFFFFF;
+}
+tr
+{
+    cursor: pointer;
+}
+tr:hover
+{
+    background: #3983ce;
+    color: #FFFFFF;
+}
+table
+{
+    border-left: solid 1px #e7e7e7;
+    border-right: solid 1px #e7e7e7;
+}
+.speak-audio
+{
+    background-color: aliceblue;
+    border: 0;
+}
+.table>tbody>tr>td
+{
+    border-bottom: solid 1px #e7e7e7;
+}
+
+
+
+
+
+
+
 
 
 
