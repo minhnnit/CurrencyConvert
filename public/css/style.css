@@ -56,7 +56,6 @@ body {
 }
 
 #convert {
-    background-color: #015b9d;
     color: #FFFFFF;
 }
 
@@ -140,6 +139,85 @@ body {
 {
     margin-top: 10px;
 }
+.darkgrey{
+    color: #202221;
+}
+.bg-convert
+{
+    background-color: #fece00;
+}
+.row.default:last-child {
+    padding-bottom: 30px;
+}
+.row.default:first-child {
+    padding-top: 30px;
+}
+.row.default {
+    padding: 10px 0;
+}
+.row h1:first-child {
+    margin-top: 0;
+}
+h1 {
+    margin: 30px 0;
+}
+.fs-16px
+{
+    font-size: 16px;
+}
+#currency-converter {
+    padding-top: 10px;
+    padding-bottom: 0;
+}
+.converter-box {
+    border-radius: 3px;
+    box-shadow: 0 0 10px 0 rgba(50,50,50,.5);
+}
+.bg-lightgrey {
+    background-color: #f4f7f9;
+}
+/*neu xoa thi bat dau tu dong nay tro xuong*/
+.converter-box #calculator {
+    padding-top: 15px!important;
+}
+.converter-box #calculator, .converter-box #result {
+    margin: 0;
+    padding: 0 15px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-bottomright: 3px;
+    border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-bottom-left-radius: 3px;
+}
+#currency-converter form#currency-form select {
+    height: 100%;
+    background-color: #fff;
+    padding: 11px 12px;
+    font-weight: 700;
+}
+#currency-converter .form-control {
+    width: 100%;
+}
+
+#currency-form #convert {
+    width: 100%;
+}
+
+.btn-wf-blue {
+    color: #202221;
+    border-color: #00e6d4;
+    background-color: #00e6d4;
+}
+
+#sell_amount
+{
+    height: 42px;
+}
+
+
+
+
 
 @media (max-width: 991px) {
     .inputCurrency {
