@@ -274,6 +274,27 @@ header {
     width: 100%;
 }
 
+.sidebar-bg {
+    background-image: url("../img/1.jpg");
+    background-repeat: no-repeat;
+    min-height: 220px !important;
+    background-size: cover;
+    background-position: center top;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #333;
+}
+
+.sidebar-bg a {
+    color: #333;
+    font-weight: 700;
+}
+
+.sidebar-bg a:hover {
+    color: blue;
+}
+
 .spellout-number {
     padding: 21px;
     color: #FFFFFF;
@@ -301,7 +322,7 @@ header {
 }
 
 .sidebar-fs {
-    font-size: 22px;
+    font-size: 23px;
 }
 
 @media (max-width: 991px) {
@@ -323,6 +344,10 @@ header {
 
     .text-white {
         font-size: 14px;
+    }
+
+    .sidebar-fs {
+        font-size: 20px;
     }
 }
 

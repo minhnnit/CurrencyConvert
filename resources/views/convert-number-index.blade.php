@@ -444,9 +444,10 @@ Convert" buttons="danger info primary success warning inverse link" class="btn b
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-xs-12">
+        <div class="col-lg-3 col-xs-12 ">
             <h3 class="relate-number text-center">RELATE AND RANDOM NUMBER</h3>
-            <div class="text-center sidebar-fs">
+            <div class="sidebar-bg">
+                <div class="text-center sidebar-fs">
                 <span>
                 <a class="hrefadd1 cursor-pointer"><span
                             class="numberAdd1 span-currency">{{!empty($data["numberAdd1"]) ? $data["numberAdd1"] : ''}}</span></a>
@@ -459,7 +460,7 @@ Convert" buttons="danger info primary success warning inverse link" class="btn b
                 <a class="hrefadd5 cursor-pointer"><span
                             class="numberAdd5 span-currency">{{!empty($data["numberAdd5"]) ? $data["numberAdd5"] : ''}}</span></a>
             </span>
-                <span>
+                    <span>
                 <a class="hrefsub1 cursor-pointer"><span
                             class="numberSub1 span-currency">{{!empty($data["numberSub1"]) ? $data["numberSub1"] : ''}}</span></a>
                 <a class="hrefsub2 cursor-pointer"><span
@@ -471,20 +472,21 @@ Convert" buttons="danger info primary success warning inverse link" class="btn b
                 <a class="hrefsub5 cursor-pointer"><span
                             class="numberSub5 span-currency">{{!empty($data["numberSub5"]) ? $data["numberSub5"] : ''}}</span></a>
             </span>
-            </div>
-            <div class="span-currency random-number text-center">
-                <span class="sidebar-fs"><b>Random Numbers:</b></span>
-                <div class="sidebar-fs">
-                    <a class="hrefrandom1 cursor-pointer"><span
-                                class="span-currency randomNumber1">{{!empty($data["randomNumber1"]) ? $data["randomNumber1"] : ''}}</span></a>
-                    <a class="hrefrandom2 cursor-pointer"><span
-                                class="span-currency randomNumber2">{{!empty($data["randomNumber2"]) ? $data["randomNumber2"] : ''}}</span></a>
-                    <a class="hrefrandom3 cursor-pointer"><span
-                                class="span-currency randomNumber3">{{!empty($data["randomNumber3"]) ? $data["randomNumber3"] : ''}}</span></a>
-                    <a class="hrefrandom4 cursor-pointer"><span
-                                class="span-currency randomNumber4">{{!empty($data["randomNumber4"]) ? $data["randomNumber4"] : ''}}</span></a>
-                    <a class="hrefrandom5 cursor-pointer"><span
-                                class="span-currency randomNumber5">{{!empty($data["randomNumber5"]) ? $data["randomNumber5"] : ''}}</span></a>
+                </div>
+                <div class="span-currency random-number text-center">
+                    <span class="sidebar-fs"><b>Random Numbers:</b></span>
+                    <div class="sidebar-fs">
+                        <a class="hrefrandom1 cursor-pointer"><span
+                                    class="span-currency randomNumber1">{{!empty($data["randomNumber1"]) ? $data["randomNumber1"] : ''}}</span></a>
+                        <a class="hrefrandom2 cursor-pointer"><span
+                                    class="span-currency randomNumber2">{{!empty($data["randomNumber2"]) ? $data["randomNumber2"] : ''}}</span></a>
+                        <a class="hrefrandom3 cursor-pointer"><span
+                                    class="span-currency randomNumber3">{{!empty($data["randomNumber3"]) ? $data["randomNumber3"] : ''}}</span></a>
+                        <a class="hrefrandom4 cursor-pointer"><span
+                                    class="span-currency randomNumber4">{{!empty($data["randomNumber4"]) ? $data["randomNumber4"] : ''}}</span></a>
+                        <a class="hrefrandom5 cursor-pointer"><span
+                                    class="span-currency randomNumber5">{{!empty($data["randomNumber5"]) ? $data["randomNumber5"] : ''}}</span></a>
+                    </div>
                 </div>
             </div>
         </div>
