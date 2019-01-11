@@ -494,7 +494,7 @@ Convert" buttons="danger info primary success warning inverse link" class="btn b
 </div>
 <div class="container">
     <section class="currency-res" tabindex="-1">
-        <h3 class="h3-title">Currencies To Audio</h3>
+        <h3 class="h3-title text-center">Currencies To Audio</h3>
         <table class="table">
             <thead class="thead-color">
             <tr>
