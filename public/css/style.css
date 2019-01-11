@@ -72,7 +72,7 @@ body {
     float: left;
     overflow: hidden;
     font-size: 16px;
-    height: 230px;
+    height: 231px;
     width: 100%;
 }
 
@@ -256,6 +256,10 @@ table {
 .table > tbody > tr > td {
     border-bottom: solid 1px #e7e7e7;
 }
+.table
+{
+    font-size: 15px;
+}
 
 header {
     position: fixed;
@@ -339,7 +343,7 @@ header {
     }
 
     .lead {
-        height: 272px;
+        height: 258px;
     }
 
     .text-white {
@@ -347,6 +351,10 @@ header {
     }
 
     .sidebar-fs {
+        font-size: 20px;
+    }
+    h3
+    {
         font-size: 20px;
     }
 }

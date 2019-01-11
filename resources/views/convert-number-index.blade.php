@@ -494,30 +494,33 @@ Convert" buttons="danger info primary success warning inverse link" class="btn b
 </div>
 <div class="container">
     <section class="currency-res" tabindex="-1">
-        <h3 class="h3-title text-center">Currencies To Audio</h3>
-        <table class="table">
-            <thead class="thead-color">
-            <tr>
-                <th>Currencies</th>
-                <th>Currencies to text</th>
-                <th>Audio</th>
-            </tr>
-            </thead>
-            <tbody>
-            @if(!empty($listCurrency))
-                @foreach($listCurrency as $v => $v_value)
-                    <tr>
-                        <td><span class="span-currency"><b>{{$v}}</b></span></td>
-                        <td>
-                            <span class="span-currency {{$v}}">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : 'one'}} {{$v_value}}</span>
-                        </td>
-                        <td><input class="speak-audio" onclick="responsiveVoice.speak($('.{{$v}}').text());"
-                                   type='button' value='🔊'/></td>
-                    </tr>
-                @endforeach
-            @endif
-            </tbody>
-        </table>
+        <h3 class="h3-title text-center">CURRENCIES TO AUDIO</h3>
+        <div class="lead">
+            <table class="table">
+                <thead class="thead-color">
+                <tr>
+                    <th>Currencies</th>
+                    <th>Currencies to text</th>
+                    <th>Audio</th>
+                </tr>
+                </thead>
+                <tbody>
+                @if(!empty($listCurrency))
+                    @foreach($listCurrency as $v => $v_value)
+                        <tr>
+                            <td><span class="span-currency"><b>{{$v}}</b></span></td>
+                            <td>
+                                <span class="span-currency {{$v}}">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : 'one'}} {{$v_value}}</span>
+                            </td>
+                            <td><input class="speak-audio" onclick="responsiveVoice.speak($('.{{$v}}').text());"
+                                       type='button' value='🔊'/></td>
+                        </tr>
+                    @endforeach
+                @endif
+                </tbody>
+            </table>
+        </div>
+        <div class="more more-lead text-center"><span class="btn btn-wf-blue"><b>More</b></span></div>
     </section>
 </div>
 <footer id="footer">
