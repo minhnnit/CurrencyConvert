@@ -78,11 +78,7 @@ class ConvertNumberIndexController extends Controller
             "ALL" => "Albanian Lek"
         ];
         $data=[];
-        $data["randomNumber1"] = $this->randomNumber1();
-        $data["randomNumber2"] = $this->randomNumber2();
-        $data["randomNumber3"] = $this->randomNumber3();
-        $data["randomNumber4"] = $this->randomNumber4();
-        $data["randomNumber5"] = $this->randomNumber5();
+        $data["randomNumber"] = $this->randomNumber();
         return view('convert-number-index')->with('listCurrency', $listCurrency)->with('data',$data);
     }
 
@@ -141,49 +137,7 @@ class ConvertNumberIndexController extends Controller
             $numberAdd = $numberInput += 1;
             array_push($numberAddArr, $numberAdd);
         }
-        return join(', ',$numberAddArr);
-    }
-
-    public function numberAdd1($numberInput){
-        $numberAdd1 = $numberInput += 1;
-        return $numberAdd1;
-    }
-    public function numberAdd2($numberInput){
-        $numberAdd2 = $numberInput += 2;
-        return $numberAdd2;
-    }
-    public function numberAdd3($numberInput){
-        $numberAdd3 = $numberInput += 3;
-        return $numberAdd3;
-    }
-    public function numberAdd4($numberInput){
-        $numberAdd4 = $numberInput += 4;
-        return $numberAdd4;
-    }
-    public function numberAdd5($numberInput){
-        $numberAdd5 = $numberInput += 5;
-        return $numberAdd5;
-    }
-
-    public function numberSub1($numberInput){
-        $numberSub1 = $numberInput -= 1;
-        return $numberSub1;
-    }
-    public function numberSub2($numberInput){
-        $numberSub2 = $numberInput -= 2;
-        return $numberSub2;
-    }
-    public function numberSub3($numberInput) {
-        $numberSub3 = $numberInput -= 3;
-        return $numberSub3;
-    }
-    public function numberSub4($numberInput) {
-        $numberSub4 = $numberInput -= 4;
-        return $numberSub4;
-    }
-    public function numberSub5($numberInput) {
-        $numberSub5 = $numberInput -= 5;
-        return $numberSub5;
+        return ($numberAddArr);
     }
 
     public function numberSub($numberInput)
@@ -193,33 +147,18 @@ class ConvertNumberIndexController extends Controller
             $numberSub = $numberInput -= 1;
             array_push($numberSubArr, $numberSub);
         }
-        return join(', ',$numberSubArr);
+        return ($numberSubArr);
     }
 
-    public function randomNumber1()
-    {
-        $randomNumber = rand();
-        return $randomNumber;
-    }
-    public function randomNumber2()
-    {
-        $randomNumber = rand();
-        return $randomNumber;
-    }
-    public function randomNumber3()
-    {
-        $randomNumber = rand();
-        return $randomNumber;
-    }
-    public function randomNumber4()
-    {
-        $randomNumber = rand();
-        return $randomNumber;
-    }
-    public function randomNumber5()
-    {
-        $randomNumber = rand();
-        return $randomNumber;
+
+    public function randomNumber(){
+        $randomArr = [];
+        for($i = 1; $i < 20; $i ++ )
+        {
+            $randomNumber = rand();
+            array_push($randomArr,$randomNumber);
+        }
+        return $randomArr;
     }
 
     public function inputNumberUrl($numberInput)
@@ -304,23 +243,9 @@ class ConvertNumberIndexController extends Controller
         $data["maxNumber"] = $maxValue;
         $data["minNumber"] = $minValue;
         $data["arraySum"] = $arraySum;
-      /*  $data["numberAdd"] = $this->numberAdd($numberInput);
-        $data["numberSub"] = $this->numberSub($numberInput);*/
-        $data["numberAdd1"] = $this->numberAdd1($numberInput);
-        $data["numberAdd2"] = $this->numberAdd2($numberInput);
-        $data["numberAdd3"] = $this->numberAdd3($numberInput);
-        $data["numberAdd4"] = $this->numberAdd4($numberInput);
-        $data["numberAdd5"] = $this->numberAdd5($numberInput);
-        $data["numberSub1"] = $this->numberSub1($numberInput);
-        $data["numberSub2"] = $this->numberSub2($numberInput);
-        $data["numberSub3"] = $this->numberSub3($numberInput);
-        $data["numberSub4"] = $this->numberSub4($numberInput);
-        $data["numberSub5"] = $this->numberSub5($numberInput);
-        $data["randomNumber1"] = $this->randomNumber1();
-        $data["randomNumber2"] = $this->randomNumber2();
-        $data["randomNumber3"] = $this->randomNumber3();
-        $data["randomNumber4"] = $this->randomNumber4();
-        $data["randomNumber5"] = $this->randomNumber5();
+        $data["numberAdd"] = $this->numberAdd($numberInput);
+        $data["numberSub"] = $this->numberSub($numberInput);
+        $data["randomNumber"] = $this->randomNumber();
         $data["convertNumber"] = $this->convertNumber($numberInput);
         $data["convertDigits"] = $this->convertDigits($numberInput);
         $data["numberInput"] = $numberInput;
