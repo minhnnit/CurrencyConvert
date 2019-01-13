@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8892e359-47c1-475c-a8d5-03ab60ffb6fd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ConvertNumberIndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ConvertNumberIndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/convert-number-to-word.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/convert-number-to-word.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/convert-number-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/convert-number-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,11 +19,20 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="convert-number-index.blade.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="convert-number-index.blade.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/resources/views/convert-number-index.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="481" column="18" lean-forward="true" selection-start-line="481" selection-start-column="18" selection-end-line="481" selection-end-column="18" />
+                <state relative-caret-position="17">
+                  <caret line="506" column="64" selection-start-line="506" selection-start-column="64" selection-end-line="506" selection-end-column="64" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/public/css/style.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="425">
+                  <caret line="299" column="1" lean-forward="true" selection-start-line="299" selection-start-column="1" selection-end-line="299" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -42,21 +49,21 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file leaf-file-name="convert-number-index.blade.php" pinned="false" current-in-tab="false">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="convert-number-index.blade.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/convert-number-index.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="346">
-                  <caret line="478" column="30" lean-forward="true" selection-start-line="472" selection-start-column="24" selection-end-line="478" selection-end-column="30" />
+                <state relative-caret-position="363">
+                  <caret line="473" column="37" selection-start-line="473" selection-start-column="37" selection-end-line="473" selection-end-column="37" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ConvertNumberIndexController.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="ConvertNumberIndexController.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ConvertNumberIndexController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="415">
-                  <caret line="257" column="29" lean-forward="true" selection-start-line="257" selection-start-column="29" selection-end-line="257" selection-end-column="29" />
+                <state relative-caret-position="4131">
+                  <caret line="244" column="38" selection-start-line="244" selection-start-column="38" selection-end-line="244" selection-end-column="38" />
                   <folding>
                     <element signature="e#39#73#0#PHP" expanded="true" />
                   </folding>
@@ -114,10 +121,11 @@
         <option value="$PROJECT_DIR$/public/css/convert-css.css" />
         <option value="$PROJECT_DIR$/resources/views/convert-number.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/resources/views/convert-number-index.blade.php" />
         <option value="$PROJECT_DIR$/public/js/convert-number-to-word.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ConvertNumberIndexController.php" />
+        <option value="$PROJECT_DIR$/../amp.html" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
       </list>
     </option>
   </component>
@@ -205,7 +213,37 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CurrencyConvert" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CurrencyConvert" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CurrencyConvert" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CurrencyConvert" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CurrencyConvert" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CurrencyConvert" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CurrencyConvert" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CurrencyConvert" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -242,18 +280,19 @@
       <workItem from="1547034324423" duration="9598000" />
       <workItem from="1547084768337" duration="731000" />
       <workItem from="1547085622213" duration="38196000" />
-      <workItem from="1547267225913" duration="3064000" />
+      <workItem from="1547267225913" duration="7251000" />
+      <workItem from="1547397072434" duration="649000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94054000" />
+    <option name="totallyTimeSpent" value="98890000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24962178" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -283,13 +322,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/js/convert-number-to-word.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ConvertNumberIndexController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1360">
@@ -542,34 +574,41 @@
     <entry file="file://$PROJECT_DIR$/bootstrap/autoload.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="358" column="5" lean-forward="true" selection-start-line="358" selection-start-column="5" selection-end-line="358" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/convert-number-to-word.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/convert-number-index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="478" column="30" lean-forward="true" selection-start-line="472" selection-start-column="24" selection-end-line="478" selection-end-column="30" />
+          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ConvertNumberIndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="257" column="29" lean-forward="true" selection-start-line="257" selection-start-column="29" selection-end-line="257" selection-end-column="29" />
+        <state relative-caret-position="4131">
+          <caret line="244" column="38" selection-start-line="244" selection-start-column="38" selection-end-line="244" selection-end-column="38" />
           <folding>
             <element signature="e#39#73#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../amp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/convert-number-index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="506" column="64" selection-start-line="506" selection-start-column="64" selection-end-line="506" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="299" column="1" lean-forward="true" selection-start-line="299" selection-start-column="1" selection-end-line="299" selection-end-column="1" />
         </state>
       </provider>
     </entry>

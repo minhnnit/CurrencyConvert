@@ -279,7 +279,7 @@ header {
 }
 
 .sidebar-bg {
-    background-image: url("../img/1.jpg");
+    background-image: url("../img/currency-wallpaper-hd-49531-51206-hd-wallpapers.jpg");
     background-repeat: no-repeat;
     min-height: 457px !important;
     background-size: cover;
@@ -291,12 +291,12 @@ header {
 }
 
 .sidebar-bg a {
-    color: #333;
+    color: #FFFFFF;
     font-weight: 700;
 }
 
 .sidebar-bg a:hover {
-    color: blue;
+    color: skyblue;
 }
 
 .spellout-number {
@@ -327,6 +327,7 @@ header {
 
 .sidebar-fs {
     font-size: 23px;
+    color: #FFFFFF;
 }
 
 @media (max-width: 991px) {
