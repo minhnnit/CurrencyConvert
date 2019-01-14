@@ -22,17 +22,8 @@
           <file leaf-file-name="convert-number-index.blade.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/convert-number-index.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="194">
-                  <caret line="314" column="24" lean-forward="true" selection-start-line="314" selection-end-line="315" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/css/style.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="287" column="12" lean-forward="true" selection-end-line="363" />
+                <state relative-caret-position="208">
+                  <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
                 </state>
               </provider>
             </entry>
@@ -54,7 +45,7 @@
             <entry file="file://$PROJECT_DIR$/resources/views/convert-number-index.blade.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="17">
-                  <caret line="839" column="52" selection-start-line="839" selection-start-column="52" selection-end-line="839" selection-end-column="52" />
+                  <caret line="474" column="52" selection-start-line="474" selection-start-column="52" selection-end-line="474" selection-end-column="52" />
                 </state>
               </provider>
             </entry>
@@ -62,7 +53,7 @@
           <file leaf-file-name="ConvertNumberIndexController.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ConvertNumberIndexController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="4131">
+                <state relative-caret-position="17">
                   <caret line="244" column="38" selection-start-line="244" selection-start-column="38" selection-end-line="244" selection-end-column="38" />
                   <folding>
                     <element signature="e#39#73#0#PHP" expanded="true" />
@@ -110,6 +101,7 @@
       <find>currencies</find>
       <find>Audio</find>
       <find>numberSub</find>
+      <find>.sidebar-bg a</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -283,12 +275,12 @@
       <workItem from="1547267225913" duration="7251000" />
       <workItem from="1547397072434" duration="734000" />
       <workItem from="1547400305862" duration="1491000" />
-      <workItem from="1547433461475" duration="3773000" />
+      <workItem from="1547433461475" duration="5977000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104239000" />
+    <option name="totallyTimeSpent" value="106443000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -565,23 +557,6 @@
     <entry file="file://$PROJECT_DIR$/bootstrap/autoload.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/convert-number-to-word.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ConvertNumberIndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4131">
-          <caret line="244" column="38" selection-start-line="244" selection-start-column="38" selection-end-line="244" selection-end-column="38" />
-          <folding>
-            <element signature="e#39#73#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../amp.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -606,14 +581,31 @@
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="287" column="12" lean-forward="true" selection-end-line="363" />
+          <caret line="287" column="12" selection-end-line="363" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ConvertNumberIndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="244" column="38" selection-start-line="244" selection-start-column="38" selection-end-line="244" selection-end-column="38" />
+          <folding>
+            <element signature="e#39#73#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/convert-number-to-word.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/convert-number-index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="314" column="24" lean-forward="true" selection-start-line="314" selection-end-line="315" />
+        <state relative-caret-position="208">
+          <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
         </state>
       </provider>
     </entry>
