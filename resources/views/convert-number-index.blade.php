@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html amp lang="en">
 <head>
+    <meta charset = "utf-8">
     <title>Currency Conversion</title>
     <meta name="viewport"
           content="width=device-width, minimum-scale=1, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -13,9 +14,373 @@
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
     <script type="text/javascript" charset="utf8" src="{{ asset('/js/convert-number-to-word.js') }}"></script>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        body {
+            font-family: Lato;
+        }
 
+        .header-content {
+            text-align: center;
+        }
+
+        .header-content {
+            background: #fff;
+            height: 60px;
+            padding: 0 15px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .header-content img {
+            height: 37px;
+        }
+
+        .logo-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 13px 0;
+        }
+
+        .convert-number-left h3 {
+            text-align: center;
+        }
+
+        .inputCurrency {
+            height: 42px;
+            width: auto;
+            display: unset;
+        }
+
+        .inputCurrency-nb {
+            height: 42px;
+            font-weight: 700;
+        }
+
+        .btn-padding {
+            padding: 10px 5px 10px 5px;
+            margin-bottom: 3px;
+        }
+
+        .display-text-audio {
+            margin: 10px 0 10px 0;
+        }
+
+        .speakout-digit {
+            margin-bottom: 10px;
+        }
+
+        .span-currency {
+            margin-left: 5px;
+        }
+
+        #convert {
+            color: #FFFFFF;
+        }
+
+        .fa-arrow-right {
+            margin-left: 3px;
+        }
+
+        .mg-bottom-5 {
+            margin-bottom: 5px;
+        }
+
+        .lead {
+            float: left;
+            overflow: hidden;
+            font-size: 16px;
+            height: 231px;
+            width: 100%;
+        }
+
+        .more {
+            cursor: pointer;
+            color: #38c5cb;
+        }
+
+        .cursor-pointer {
+            cursor: pointer;
+        }
+
+        .color-blue {
+            color: #55552b;
+        }
+
+        #footer {
+            padding-top: 0;
+            background: #f2f2f2;
+            padding-bottom: 5px;
+        }
+
+        #footer .footer-left {
+            text-align: center;
+            color: #555;
+            padding-top: 35px;
+        }
+
+        #footer .footer-left ul {
+            margin-bottom: 0;
+            float: none;
+            display: inline-block;
+        }
+
+        #footer .footer-right {
+            margin-top: 15px;
+            text-align: center;
+            color: #555;
+        }
+
+        #footer .footer-left a {
+            display: inline-block;
+            font-size: 14px;
+            padding: 0 8px;
+            border-right: 1px solid #ccc;
+            color: #555;
+            text-decoration: none;
+        }
+
+        .convert-button {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .button-convert-first {
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .relate-number {
+            font-size: 16px;
+        }
+
+        .random-number {
+            margin-top: 10px;
+        }
+
+        .darkgrey {
+            color: #202221;
+        }
+
+        .bg-convert {
+            background-color: skyblue;
+        }
+
+        .row.default:last-child {
+            padding-bottom: 30px;
+        }
+
+        .row.default:first-child {
+            padding-top: 75px;
+        }
+
+        .row.default {
+            padding: 10px 0;
+        }
+
+        .row h1:first-child {
+            margin-top: 0;
+        }
+
+        h1 {
+            margin: 30px 0;
+        }
+
+        .fs-16px {
+            font-size: 16px;
+        }
+
+        #currency-converter {
+            padding-top: 10px;
+            padding-bottom: 0;
+        }
+
+        .converter-box {
+            border-radius: 3px;
+            box-shadow: 0 0 10px 0 rgba(50, 50, 50, .5);
+        }
+
+        .bg-lightgrey {
+            background-color: #f4f7f9;
+        }
+
+        /*neu xoa thi bat dau tu dong nay tro xuong*/
+        .converter-box #calculator {
+            padding-top: 15px !important;
+        }
+
+        .converter-box #calculator {
+            margin: 0;
+            padding: 0 15px;
+            -webkit-border-bottom-right-radius: 3px;
+            -moz-border-radius-bottomright: 3px;
+            border-bottom-right-radius: 3px;
+            -webkit-border-bottom-left-radius: 3px;
+            -moz-border-radius-bottomleft: 3px;
+            border-bottom-left-radius: 3px;
+        }
+
+        #currency-converter form#currency-form select {
+            height: 100%;
+            background-color: #fff;
+            padding: 11px 12px;
+            font-weight: 700;
+        }
+
+        #currency-converter .form-control {
+            width: 100%;
+        }
+
+        #currency-form #convert {
+            width: 100%;
+        }
+
+        .btn-wf-blue {
+            color: #202221;
+            border-color: #00e6d4;
+            background-color: #00e6d4;
+        }
+
+        .currency-res {
+            padding: 0 0 40px 0;
+            margin: 30px 0;
+        }
+
+        .thead-color {
+            background-color: #004fa3;
+            color: #FFFFFF;
+        }
+
+        tr {
+            cursor: pointer;
+        }
+
+        tr:hover {
+            background: #3983ce;
+            color: #FFFFFF;
+        }
+
+        table {
+            border-left: solid 1px #e7e7e7;
+            border-right: solid 1px #e7e7e7;
+        }
+
+        .speak-audio {
+            background-color: aliceblue;
+            border: 0;
+            padding: 5px 10px;
+        }
+
+        .table > tbody > tr > td {
+            border-bottom: solid 1px #e7e7e7;
+        }
+        .table
+        {
+            font-size: 15px;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            z-index: 111;
+        }
+
+        .image {
+            background-image: url("../../public/img/currency.jpeg");
+            background-repeat: no-repeat;
+            min-height: 220px !important;
+            background-size: cover;
+            background-position: center top;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .sidebar-bg {
+            background-image: url("../../public/img/currency-wallpaper-hd-49531-51206-hd-wallpapers.jpg");
+            background-repeat: no-repeat;
+            min-height: 457px !important;
+            background-size: cover;
+            background-position: center top;
+            top: 0;
+            left: 0;
+            width: 100%;
+            color: #333;
+        }
+
+        .sidebar-bg a {
+            /*color: #FFFFFF;*/
+            font-weight: 700;
+        }
+
+        .sidebar-bg a:hover {
+            color: skyblue;
+        }
+
+        .spellout-number {
+            /*padding: 21px;*/
+            color: #FFFFFF;
+        }
+
+        .text-white {
+            /*color: #FFFFFF;*/
+            font-size: 16px;
+            border: none;
+        }
+
+        .relate-number {
+            font-size: 16px;
+            color: #fff;
+            background-color: #45c5cb;
+            line-height: 54px;
+            font-weight: 700;
+        }
+
+        .h3-title {
+            color: #fff;
+            background-color: #45c5cb;
+            line-height: 54px;
+            font-weight: 700;
+        }
+
+        .sidebar-fs {
+            /*font-size: 23px;*/
+            color: #FFFFFF;
+        }
+
+        @media (max-width: 991px) {
+            .inputCurrency {
+                height: 42px;
+                width: 100%;
+                display: unset;
+            }
+        }
+
+        @media (max-width: 479px) {
+            .inputCurrency-nb {
+                width: 100%;
+            }
+
+            .lead {
+                height: 258px;
+            }
+
+            .text-white {
+                font-size: 14px;
+            }
+
+            .sidebar-fs {
+                font-size: 20px;
+            }
+            h3
+            {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
 <header>
