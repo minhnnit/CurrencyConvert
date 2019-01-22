@@ -1,7 +1,9 @@
 <?php namespace App\Http\Controllers;
 
+use App\Http\Requests\Request;
 use Illuminate\Http\Request as Re;
 use NumberFormatter;
+use Jenssegers\Agent\Agent;
 
 
 class ConvertNumberIndexController extends Controller
@@ -79,6 +81,12 @@ class ConvertNumberIndexController extends Controller
         ];
         $data=[];
         $data["randomNumber"] = $this->randomNumber();
+        $agent = new Agent();
+        $isPhone = $agent->isPhone();
+        $isTablet = $agent->isTablet();
+        if($isPhone || $isTablet){
+            return view('convert-amp')->with('listCurrency', $listCurrency)->with('data',$data);
+        }
         return view('convert-number-index')->with('listCurrency', $listCurrency)->with('data',$data);
     }
 
@@ -159,6 +167,12 @@ class ConvertNumberIndexController extends Controller
             array_push($randomArr,$randomNumber);
         }
         return $randomArr;
+    }
+
+    public function numberMobile(Re $request)
+    {
+        $numberInput = $request->all()['numberInput'];
+        return redirect('/'.$numberInput.'-numbers');
     }
 
     public function inputNumberUrl($numberInput)
@@ -249,6 +263,12 @@ class ConvertNumberIndexController extends Controller
         $data["convertNumber"] = $this->convertNumber($numberInput);
         $data["convertDigits"] = $this->convertDigits($numberInput);
         $data["numberInput"] = $numberInput;
+        $agent = new Agent();
+        $isPhone = $agent->isPhone();
+        $isTablet = $agent->isTablet();
+        if($isPhone || $isTablet){
+            return view('convert-amp')->with('listCurrency', $listCurrency)->with('data',$data);
+        }
         return view('convert-number-index')->with('data', $data)->with('listCurrency', $listCurrency);
     }
 
@@ -275,6 +295,84 @@ class ConvertNumberIndexController extends Controller
         $amount = $request->all()['amount'];
         $to_currency = $request->all()['to_currency'];
         $paramConvert = $this->convertCurrency($amount, $from_currency, $to_currency);
+        $listCurrency = [
+            "USD" => "United States Dollars",
+            "EUR" => "EURO",
+            "VND" => "Vietnam Dong",
+            "GBP" => "British Pound",
+            "EGP" => "Egyptian Pound",
+            "CNY" => "Chinese Yuan",
+            "CAD" => "Canadian Dollar",
+            "FRF" => "French Franc",
+            "DEM" => "German Mark",
+            "HKD" => "HongKong Dollar",
+            "ISK" => "Iceland Krona",
+            "IDR" => "Indonesian Rupiah",
+            "JPY" => "Japanese Yen",
+            "LAK" => "Lao Kip",
+            "MOP" => "Macau Pataca",
+            "MXN" => "Mexican Peso",
+            "BRL" => "Brazilian Real",
+            "PHP" => "Philippine Peso",
+            "THB" => "Thai Baht",
+            "TWD" => "Taiwan Dollar",
+            "SEK" => "Swedish Krona",
+            "ZWD" => "Zimbabwe Dollar",
+            "ZMK" => "Zambian Kwacha",
+            "VES" => "Venezuelan Bolivar Soberano",
+            "UZS" => "Uzbekistan Som",
+            "UAH" => "Ukraine Hryvnia",
+            "UYU" => "Uruguayan Peso",
+            "UGX" => "Uganda Shilling",
+            "TMM" => "Turkmenistan Manat",
+            "TRY" => "Turkish Lira",
+            "TOP" => "Tonga Pa'anga",
+            "TJS" => "Tajikistani Somoni",
+            "CHF" => "Swiss Franc",
+            "LKR" => "Sri Lanka Rupee",
+            "ESP" => "Spanish Peseta",
+            "RON" => "Romanian New Lei",
+            "PTE" => "Portuguese Escudo",
+            "PLN" => "Polish Zloty",
+            "PKR" => "Pakistan Rupee",
+            "KPW" => "North Korean Won",
+            "NGN" => "Nigerian Naira",
+            "NZD" => "New Zealand Dollar",
+            "MMK" => "Myanmar Kyat",
+            "MAD" => "Moroccan Dirham",
+            "MYR" => "Malaysian Ringgit",
+            "LYD" => "Libyan Dinar",
+            "KZT" => "Kazakhstan Tenge",
+            "JMD" => "Jamaican Dollar",
+            "ITL" => "Italian Lira",
+            "IQD" => "Iraqi Dinar",
+            "HUF" => "Hungarian Forint",
+            "GNF" => "Guinea Franc",
+            "ECS" => "Ecuador Sucre",
+            "CZK" => "Czech Koruna",
+            "CUP" => "Cuban Peso",
+            "CLP" => "Chilean Peso",
+            "KYD" => "Cayman Islands Dollar",
+            "BIF" => "Burundi Franc",
+            "BGN" => "Bulgarian Lev",
+            "BND" => "Brunei Dollar",
+            "BWP" => "Botswana Pula",
+            "BAM" => "Bosnian Mark",
+            "BEF" => "Belgian Franc",
+            "BTN" => "Bhutan Ngultrum",
+            "BHD" => "Bahraini Dinar",
+            "ARS" => "Argentine Peso",
+            "ALL" => "Albanian Lek"
+        ];
+        $data = [];
+        $data["randomNumber"] = $this->randomNumber();
+        $data['paramConvert'] = $paramConvert;
+        $agent = new Agent();
+        $isPhone = $agent->isPhone();
+        $isTablet = $agent->isTablet();
+        if($isPhone || $isTablet){
+            return view('convert-amp')->with('data',$data)->with('listCurrency',$listCurrency);
+        }
         return json_encode($paramConvert);
     }
 }

@@ -15,3 +15,4 @@
 Route::get('/', 'ConvertNumberIndexController@index');
 Route::get('/convertCurrency', 'ConvertNumberIndexController@generateConvertCurrency');
 Route::get('/{inputNumber}-numbers', 'ConvertNumberIndexController@inputNumberUrl');
+Route::get('/numberMobile', 'ConvertNumberIndexController@numberMobile');
