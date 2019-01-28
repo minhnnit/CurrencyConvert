@@ -13,9 +13,10 @@
 
     <!-- AMP boilerplate -->
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
-    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
 
@@ -82,10 +83,6 @@
 
         .speakout-digit {
             margin-bottom: 10px;
-        }
-
-        .span-currency {
-            margin-left: 5px;
         }
 
         #convert {
@@ -295,7 +292,7 @@
         }
 
         .image {
-            background-image: url("../public/img/currency.jpeg");
+            background-image: url("../public/img/1.jpg");
             background-repeat: no-repeat;
             min-height: 220px !important;
             background-size: cover;
@@ -328,9 +325,9 @@
         }
 
         .text-white {
-            color: #FFFFFF;
             font-size: 16px;
             border: none;
+            color: greenyellow;
         }
 
         .relate-number {
@@ -403,6 +400,10 @@
             bottom: 83px;
         }
 
+        .randomNumber
+        {
+            padding-left: 5px;
+        }
 
     </style>
 </head>
@@ -790,7 +791,7 @@
                                 <tr>
                                     <td><span><b>Spellout each digits of number input</b></span></td>
                                     <td>
-                                        <span class="eachNumberToWordAudio">{{!empty($data["convertDigits"]) ? $data["convertDigits"] : 'one'}}</span>
+                                        <span class="eachNumberToWordAudio"><b>{{!empty($data["convertDigits"]) ? $data["convertDigits"] : 'one'}}</b></span>
                                     </td>
                                     <td><input class="speak-audio"
                                                onclick="responsiveVoice.speak($('.eachNumberToWordAudio').text());"
@@ -799,7 +800,7 @@
                                 <tr>
                                     <td><span><b>Spellout rule-based format</b></span></td>
                                     <td><span
-                                                class="allNumberToWordAudio">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : 'one'}}</span>
+                                                class="allNumberToWordAudio"><b>{{!empty($data["convertNumber"]) ? $data["convertNumber"] : 'one'}}</b></span>
                                     </td>
                                     <td><input class="speak-audio"
                                                onclick="responsiveVoice.speak($('.allNumberToWordAudio').text());"
@@ -808,23 +809,23 @@
                                 </tr>
                                 <tr>
                                     <td><b>Even numbers in input string</b></td>
-                                    <td><span>{{!empty($data["evenNumber"]) ? $data["evenNumber"] : ''}}</span>
+                                    <td><span><b>{{!empty($data["evenNumber"]) ? $data["evenNumber"] : ''}}</b></span>
                                     </td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <td><b>Odd numbers in input string</b></td>
-                                    <td><span>{{!empty($data["oddNumber"]) ? $data["oddNumber"] : '1'}}</span></td>
+                                    <td><span><b>{{!empty($data["oddNumber"]) ? $data["oddNumber"] : '1'}}</b></span></td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <td><b>Min number in input string</b></td>
-                                    <td><span>{{!empty($data["minNumber"]) ? $data["minNumber"] : '1'}}</span></td>
+                                    <td><span><b>{{!empty($data["minNumber"]) ? $data["minNumber"] : '1'}}</b></span></td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <td><b>Sum all digits in input string</b></td>
-                                    <td><span>{{!empty($data["arraySum"]) ? $data["arraySum"] : '1'}}</span></td>
+                                    <td><span><b>{{!empty($data["arraySum"]) ? $data["arraySum"] : '1'}}</b></span></td>
                                     <td></td>
                                 </tr>
                                 </tbody>
@@ -876,32 +877,6 @@
 <div class="container">
     <section class="currency-res" tabindex="-1">
         <h3 class="h3-title text-center">CURRENCIES TO AUDIO</h3>
-        {{--<div class="lead">--}}
-            {{--<table class="table">--}}
-                {{--<thead class="thead-color">--}}
-                {{--<tr>--}}
-                    {{--<th>Currencies</th>--}}
-                    {{--<th>Currencies to text</th>--}}
-                    {{--<th>Audio</th>--}}
-                {{--</tr>--}}
-                {{--</thead>--}}
-                {{--<tbody>--}}
-                {{--@if(!empty($listCurrency))--}}
-                    {{--@foreach($listCurrency as $v => $v_value)--}}
-                        {{--<tr>--}}
-                            {{--<td><span class="span-currency"><b>{{$v}}</b></span></td>--}}
-                            {{--<td>--}}
-                                {{--<span class="span-currency {{$v}}">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : 'one'}} {{$v_value}}</span>--}}
-                            {{--</td>--}}
-                            {{--<td><input class="speak-audio" onclick="responsiveVoice.speak($('.{{$v}}').text());"--}}
-                                       {{--type='button' value='🔊'/></td>--}}
-                        {{--</tr>--}}
-                    {{--@endforeach--}}
-                {{--@endif--}}
-                {{--</tbody>--}}
-            {{--</table>--}}
-        {{--</div>--}}
-        {{--<div class="more more-lead text-center"><span class="btn btn-wf-blue"><b>More</b></span></div>--}}
         <div class="panel-wrapper">
             <a href="#show" class="show btn-more" id="show">Show More</a>
             <a href="#hide" class="hide btn-more" id="hide">Show Less</a>
