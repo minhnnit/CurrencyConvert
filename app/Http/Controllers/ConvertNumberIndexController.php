@@ -3,7 +3,6 @@
 use App\Http\Requests\Request;
 use Illuminate\Http\Request as Re;
 use NumberFormatter;
-use Jenssegers\Agent\Agent;
 
 
 class ConvertNumberIndexController extends Controller
@@ -81,12 +80,6 @@ class ConvertNumberIndexController extends Controller
         ];
         $data=[];
         $data["randomNumber"] = $this->randomNumber();
-        $agent = new Agent();
-        $isPhone = $agent->isPhone();
-        $isTablet = $agent->isTablet();
-        if($isPhone || $isTablet){
-            return view('convert-amp')->with('listCurrency', $listCurrency)->with('data',$data);
-        }
         return view('convert-number-index')->with('listCurrency', $listCurrency)->with('data',$data);
     }
 
@@ -263,12 +256,6 @@ class ConvertNumberIndexController extends Controller
         $data["convertNumber"] = $this->convertNumber($numberInput);
         $data["convertDigits"] = $this->convertDigits($numberInput);
         $data["numberInput"] = $numberInput;
-        $agent = new Agent();
-        $isPhone = $agent->isPhone();
-        $isTablet = $agent->isTablet();
-        if($isPhone || $isTablet){
-            return view('convert-amp')->with('listCurrency', $listCurrency)->with('data',$data);
-        }
         return view('convert-number-index')->with('data', $data)->with('listCurrency', $listCurrency);
     }
 
@@ -367,12 +354,6 @@ class ConvertNumberIndexController extends Controller
         $data = [];
         $data["randomNumber"] = $this->randomNumber();
         $data['paramConvert'] = $paramConvert;
-        $agent = new Agent();
-        $isPhone = $agent->isPhone();
-        $isTablet = $agent->isTablet();
-        if($isPhone || $isTablet){
-            return view('convert-amp')->with('data',$data)->with('listCurrency',$listCurrency);
-        }
         return json_encode($paramConvert);
     }
 }
