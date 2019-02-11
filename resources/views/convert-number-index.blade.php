@@ -398,7 +398,7 @@ Convert" buttons="danger info primary success warning inverse link" class="btn b
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td><span><b>Spellout each digits of number input</b></span></td>
+                                    <td><span><b>Spellout Each Digits Of Number Input</b></span></td>
                                     <td>
                                         <span class="eachNumberToWordAudio">{{!empty($data["convertDigits"]) ? $data["convertDigits"] : 'one'}}</span>
                                     </td>
