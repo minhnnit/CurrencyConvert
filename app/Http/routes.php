@@ -16,3 +16,6 @@ Route::get('/', 'ConvertNumberIndexController@index');
 Route::get('/convertCurrency', 'ConvertNumberIndexController@generateConvertCurrency');
 Route::get('/{inputNumber}-numbers', 'ConvertNumberIndexController@inputNumberUrl');
 Route::get('/numberMobile', 'ConvertNumberIndexController@numberMobile');
+Route::get('/sitemap.xml', 'SitemapController@index');
+Route::get('/sitemap/keywords_{page}.xml', 'SitemapController@keywords');
+Route::get('/insertToDB', 'SitemapController@insertToDB');

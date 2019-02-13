@@ -10,6 +10,14 @@ $(document).ready(function () {
        }
        else
        {
+           $.ajax({
+               url: home + '/insertToDB',
+               type:'GET',
+               data: {numberInput: numberInput},
+               success: function (response) {
+                   console.log('success');
+               }
+           });
            window.location.href = convertNumberUrl;
        }
     });

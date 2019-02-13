@@ -400,7 +400,7 @@ Convert" buttons="danger info primary success warning inverse link" class="btn b
                                 <tr>
                                     <td><span><b>Spellout Each Digits Of Number Input</b></span></td>
                                     <td>
-                                        <span class="eachNumberToWordAudio">{{!empty($data["convertDigits"]) ? $data["convertDigits"] : 'one'}}</span>
+                                        <span class="eachNumberToWordAudio"><b>{{!empty($data["convertDigits"]) ? $data["convertDigits"] : 'one'}}</b></span>
                                     </td>
                                     <td><input class="speak-audio"
                                                onclick="responsiveVoice.speak($('.eachNumberToWordAudio').text());"
@@ -409,7 +409,7 @@ Convert" buttons="danger info primary success warning inverse link" class="btn b
                                 <tr>
                                     <td><span><b>Spellout rule-based format</b></span></td>
                                     <td><span
-                                                class="allNumberToWordAudio">{{!empty($data["convertNumber"]) ? $data["convertNumber"] : 'one'}}</span>
+                                                class="allNumberToWordAudio"><b>{{!empty($data["convertNumber"]) ? $data["convertNumber"] : 'one'}}</b></span>
                                     </td>
                                     <td><input class="speak-audio"
                                                onclick="responsiveVoice.speak($('.allNumberToWordAudio').text());"
@@ -418,23 +418,23 @@ Convert" buttons="danger info primary success warning inverse link" class="btn b
                                 </tr>
                                 <tr>
                                     <td><b>Even numbers in input string</b></td>
-                                    <td><span>{{!empty($data["evenNumber"]) ? $data["evenNumber"] : ''}}</span>
+                                    <td><span><b>{{!empty($data["evenNumber"]) ? $data["evenNumber"] : ''}}</b></span>
                                     </td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <td><b>Odd numbers in input string</b></td>
-                                    <td><span>{{!empty($data["oddNumber"]) ? $data["oddNumber"] : '1'}}</span></td>
+                                    <td><span><b>{{!empty($data["oddNumber"]) ? $data["oddNumber"] : '1'}}</b></span></td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <td><b>Min number in input string</b></td>
-                                    <td><span>{{!empty($data["minNumber"]) ? $data["minNumber"] : '1'}}</span></td>
+                                    <td><span><b>{{!empty($data["minNumber"]) ? $data["minNumber"] : '1'}}</b></span></td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <td><b>Sum all digits in input string</b></td>
-                                    <td><span>{{!empty($data["arraySum"]) ? $data["arraySum"] : '1'}}</span></td>
+                                    <td><span><b>{{!empty($data["arraySum"]) ? $data["arraySum"] : '1'}}</b></span></td>
                                     <td></td>
                                 </tr>
                                 </tbody>
