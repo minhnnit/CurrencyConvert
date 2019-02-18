@@ -22,7 +22,7 @@
     <div class="header-content">
         <div class="logo-header">
             <a href="{{ url('/') }}">
-                <img src="../public/img/Back-To-Homepage-button.png" alt="">
+                <img src="{{ asset ('img/Back-To-Homepage-button.png') }}" alt="">
             </a>
         </div>
     </div>
