@@ -261,12 +261,12 @@ class ConvertNumberIndexController extends Controller
 
     function convertCurrency($amount, $from_currency, $to_currency)
     {
-
+        $apiKey = 'a3bc04a9b21443a92fe5';
         $from_Currency = urlencode($from_currency);
         $to_Currency = urlencode($to_currency);
         $query = "{$from_Currency}_{$to_Currency}";
 
-        $json = file_get_contents("https://free.currencyconverterapi.com/api/v6/convert?q={$query}&compact=ultra");
+        $json = file_get_contents("https://free.currencyconverterapi.com/api/v6/convert?q={$query}&apiKey={$apiKey}&compact=ultra");
         $obj = json_decode($json, true);
 
         $val = floatval($obj["$query"]);
